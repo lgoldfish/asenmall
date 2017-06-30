@@ -1,0 +1,98 @@
+.navbar {
+	background-color: #09C;
+	color: #fff;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin: 0;
+    border: 0;
+}
+.nav_main {
+	width: 13%;
+	height: 1080px;
+	background-color: #293038;
+}
+.nav_main ul li {
+	text-indent: 10px;
+	
+}
+.nav_main>ul {
+	padding-top: 20px;
+}
+.nav_main>ul>li:hover {
+cursor: pointer;
+}
+.nav_main ul li {
+	color: #fff;
+	height: 40px;
+}
+.nav_main ul li:hover {
+	background-color: #42515F;
+}
+.nav_main ul li:active {
+	background-color: #09C;
+}
+.nav_main ul li a {
+	color:#fff;
+	line-height: 40px;
+}
+.nav_main ul li a:hover {
+	text-decoration: none;
+} 
+.nav_main ul li a i {
+	margin-right: 8px;
+}
+.nav_main ul li ul li {
+	padding-left:50px;
+}
+.nav_main , .content {
+	float: left;
+}
+.content {
+	width: 87%;
+}
+.content h1 {
+	color:#09C;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.form-inline {
+	border: 1px solid #09C;
+	width: 765px;
+	margin: 0 auto;
+}
+.btn-success+span {
+	margin-left: 15px;
+	font-size: 14px;
+}
+
+.shanpinguanli {
+	display: block;
+}
+.flcx {
+	margin-bottom: 55px;
+	margin-left: -80px;
+}
+.flcxselect {
+	display: inline-block;
+	width: 630px;
+}
+.flcxform {
+	height: 40px;
+	margin-left: 430px;
+}
+.allcx {
+	margin-left: 2px;
+	margin-bottom: 55px;
+}
+.user form {
+	margin: 40px auto;
+	width: 480px;
+	display: block;
+    padding-left: 70px;
+}

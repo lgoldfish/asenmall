@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>后台管理首页</title>
+    <!-- Bootstrap -->
+    <!-- <link href="../stylesheets/bootstrap.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 左侧导航菜单 -->
+    <div>
+        <nav class="navbar navbar-default ">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!-- <a class="navbar-brand" href="#">Brand</a> -->
+                    <span style="color:#fff" class=" navbar-brand glyphicon glyphicon-home" aria-hidden="true"></span>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/admin/home">后台管理首页</a>
+                        </li>
+                        <li><a href="/">返回前台首页</a></li>
+                    </ul>
+                    <form method="get" class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="0" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li style="line-height: 50px;margin-right: 600px;">操作状态：<i style="color: red"><%=title%></i></li>
+                        <li><a href="#">用户名：admin</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="nav_main" style="height: 760px" >
+        <ul>
+            <li><a href="/admin/home/regist"><i class=" fa fa-user-o"></i>用户中心</a></li>
+            <li><a href="/admin/home/banner"><i class="fa fa-file-image-o"></i>banner图</a></li>
+            <li><a href="/admin/home/media"><i class="fa fa-camera"></i>媒体板块</a></li>
+            <li><a href="/admin/home/commodityAdd"><i class="fa fa-shopping-basket"></i>商品添加</a></li>
+            <li class="moreList"><a href="/admin/home"><i class="fa fa-object-group"></i>商品管理</a>
+                <ul>
+                    <li><a href="javascript:void(0);">智能仓储</a></li>
+                    <li><a href="javascript:void(0);">焊接设备</a></li>
+                    <li><a href="javascript:void(0);">切割设备</a></li>
+                    <li><a href="javascript:void(0);">电焊机</a></li>
+                    <li><a href="">辅机具</a></li>
+                    <li><a href="javascript:void(0);">焊接配件</a></li>
+                    <li><a href="javascript:void(0);">切割配件</a></li>
+                    <li><a href="javascript:void(0);">劳动保护</a></li>
+                    <li><a href="javascript:void(0);">工业五金</a></li>
+                    <li><a href="javascript:void(0);">焊材</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <!--  商品管理板块-->
+        <div style="display: block;" class="shanpinguanli container">
+            <h1 class="text-center">商品管理页面</h1><span class="text-primary">共计： <strong class="text-danger" style="font-size: 20px;font-weight: bold;"> <%=count%> </strong>  条记录</span>
+            <form method="POST" action="/admin/home/select"  class="form-horizontal flcxform">
+                <div class="form-group flcxselect " >
+                    <label for="type" class="col-sm-2 control-label">分类查询：</label>
+                    <div class="col-sm-8">
+                        <select name="id" id="type" class="form-control">
+                          <!--   <option value="全部商品">全部商品</option> -->
+                            <option value="智能仓储">智能仓储</option>
+                            <option value="焊接设备">焊接设备</option>
+                            <option value="切割设备">切割设备</option>
+                            <option value="电焊机">电焊机</option>
+                            <option value="辅具类">辅具类</option>
+                            <option value="焊接配件">焊接配件</option>
+                            <option value="切割配件">切割配件</option>
+                            <option value="劳动保护">劳动保护</option>
+                            <option value="工业五金">工业五金</option>
+                            <option value="焊材"> 焊材</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-default btn-success flcx ">本类查询</button>
+                <a class="btn btn-default btn-primary allcx" href="/admin/home">全部查询</a>
+            </form>
+            <div>
+                <table class="table table-bordered table-striped " style="width: 1140px">
+                    <tr>
+                        <th>商品名称</th>
+                        <th>商品型号</th>
+                        <th>商品价格</th>
+                        <th>品牌名称</th>
+                        <th>商品类目</th>
+                        <th>商品主图</th>
+                        <th>操作（修改 / 删除）</th>
+                    </tr>
+                    <%commodity.forEach((value,i)=>{%>
+                        <tr>
+                            <td>
+                                <%=value.title%>
+                            </td>
+                            <td>
+                                <%=value.model%>
+                            </td>
+                            <td>
+                                <%=value.price%>
+                            </td>
+                            <td>
+                                <%=value.brand%>
+                            </td>
+                            <td>
+                                <%=value.id%>
+                            </td>
+                            <td><img style="width: 40px" src="/images/<%=value.mainpic%>"></td>
+                            <td><a href="/admin/home/update/<%=value._id%>/<%=value.mainpic%>" class="btn btn-primary margin">修改商品</a>
+                                <a href="/admin/home/remove/<%=value._id%>/<%=value.mainpic%>" class="btn btn-danger margin">删除商品</a>
+                            </td>
+                        </tr>
+                        <%})%>
+                </table>
+            </div>
+            <!-- 分页 -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <% if(currentPage == 1){%>
+                        <li class="disabled">
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <% } else {%>
+                            <li>
+                                <a href="/admin/home?page=<%=currentPage-1%>" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <% } %>
+                                <% for(var index=1;index<=commodityCount;index++){%>
+                                    <% if(currentPage == index) {%>
+                                        <li class="active">
+                                            <a href="/admin/home?page=<%=index%>">
+                                                <%=index%>
+                                            </a>
+                                        </li>
+                                        <% } else {%>
+                                            <li>
+                                                <a href="/admin/home?page=<%=index%>">
+                                                    <%=index%>
+                                                </a>
+                                            </li>
+                                            <% } %>
+                                                <%}%>
+                                                    <% if(currentPage == commodityCount){%>
+                                                        <li class="disabled">
+                                                            <a href="#" aria-label="Next">
+                                                                <span aria-hidden="true">&raquo;</span>
+                                                            </a>
+                                                        </li>
+                                                        <% } else {%>
+                                                            <li>
+                                                                <a href="/admin/home?page=<%=parseInt(currentPage)+1%>" aria-label="Next">
+                                                                    <span aria-hidden="true">&raquo;</span>
+                                                                </a>
+                                                            </li>
+                                                            <% }%>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/javascripts/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+.ul_list {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+   border-top: 2px solid #b1b1b1;
+}
+
+.ul_list li {
+    position: relative;
+    width:100% ;
+    padding: 0 2.0rem 0 3.5rem;
+    height: 5.0rem;
+    background: #ffffff;
+    border-bottom: 1px solid #b1b1b1;
+}
+
+.prt_title {
+    display: block;
+    width: 70%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 0.2rem;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+.prt_font {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    text-align: left;
+    color: #666666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 6px;
+    margin-left: 20px;
+}
+.prt_prc {
+	position: absolute;
+    width: 4.5rem;
+    height:4.5rem;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    top: 0.25rem;
+    left: 0.4rem;
+    border: 1px solid #CCCCCC;
+    padding: 0.1rem;
+}
+.prt_prc img {
+	max-width: 100%;
+    vertical-align: middle;
+}
+.prt_next {
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    /*overflow: hidden;*/
+    top: 1.5rem;
+    right:4rem;
+}
+.prt_next img {
+   width: 1.8rem;
+   height: 1.8rem; 
+}

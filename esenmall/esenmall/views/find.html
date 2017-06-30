@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>焊割设备及配件营销中心---查询页</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/list.css">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="head_top bgc margin-bottom">
+        <div class="container  ">
+            <span>收藏</span>
+            <span class="phone_number">
+                <span><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>0536-8572582</span>
+            <span><i class="glyphicon glyphicon-phone"></i>手机商城</span>
+            </span>
+        </div>
+    </div>
+    <div class="container margin-bottom ">
+       <%for(var x=0;x<banner.length;x++){%>
+                    <%if(banner[x].id=="banner01"){%>
+                       <img class="banner01" src="/images/<%=banner[x].img%>">
+                        <%}%>
+                            <%}%>
+    </div>
+    <div class="container logo">
+        <img src="/images/logo.jpg" alt="">
+        <form  class="sousou" action="/find">
+            <input type="text" name="find" placeholder="搜索 &nbsp  型号/系列/品牌">
+            <button><img src="/images/model/sousuo.jpg"></button>
+        </form>
+    </div>
+    <div class="container">
+        <ul class="nav">
+            <li class="show01"><a href="javascript：void(0);">产品分类</a></li>
+            <li><a href="/">首页</a></li>
+            <li><a href="/allList">所有商品</a></li>
+            <li><a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')">网上商城</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="javascript:void(0);" onclick="window.open('http://www.sgdhj.net/')">埃森自动化</a></li>
+        </ul>
+    </div>
+    <div class="container ">
+        <ul class="nav_left">
+            <li><a href="/list/智能仓储">智能仓储</a></li>
+            <li><a href="/list/焊接设备">焊接设备</a></li>
+            <li><a href="/list/切割设备">切割设备</a></li>
+            <li><a href="/list/电焊机">电焊机</a></li>
+            <li><a href="/list/辅具类">辅具类</a></li>
+            <li><a href="/list/焊接配件">焊接配件</a></li>
+            <li><a href="/list/切割配件">切割配件</a></li>
+            <li><a href="/list/劳动保护">劳动保护</a></li>
+            <li><a href="/list/工业五金">工业五金</a></li>
+            <li><a href="/list/焊材">焊材</a></li>
+        </ul>
+        <ul class="nav_left_show" style="display: block;">
+            <li class="bgc">
+                <h4>智能仓储</h4>
+                <%for(var i=0 ; i< zncs.length ;i ++){%>
+                    <a href="/detail/<%=zncs[i]._id%>">
+                        <p>
+                            <%=zncs[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>焊接设备</h4>
+                <%for(var i=0 ; i< hjsb.length ;i ++){%>
+                    <a href="/detail/<%=hjsb[i]._id%>">
+                        <p>
+                            <%=hjsb[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>切割设备</h4>
+                <%for(var i=0 ; i< qgsb.length ;i ++){%>
+                    <a href="/detail/<%=qgsb[i]._id%>">
+                        <p>
+                            <%=qgsb[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>电焊机</h4>
+                <%for(var i=0 ; i< dhj.length ;i ++){%>
+                    <a href="/detail/<%=dhj[i]._id%>">
+                        <p>
+                            <%=dhj[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>辅具类</h4>
+                <%for(var i=0 ; i< fjl.length ;i ++){%>
+                    <a href="/detail/<%=fjl[i]._id%>">
+                        <p>
+                            <%=fjl[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>焊接配件</h4>
+                <%for(var i=0 ; i< hjpj.length ;i ++){%>
+                    <a href="/detail/<%=hjpj[i]._id%>">
+                        <p>
+                            <%=hjpj[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>切割配件</h4>
+                <%for(var i=0 ; i< qgpj.length ;i ++){%>
+                    <a href="/detail/<%=qgpj[i]._id%>">
+                        <p>
+                            <%=qgpj[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>劳动保护</h4>
+                <%for(var i=0 ; i< ldbh.length ;i ++){%>
+                    <a href="/detail/<%=ldbh[i]._id%>">
+                        <p>
+                            <%=ldbh[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>工业五金</h4>
+                <%for(var i=0 ; i< gywj.length ;i ++){%>
+                    <a href="/detail/<%=gywj[i]._id%>">
+                        <p>
+                            <%=gywj[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>焊材</h4>
+                <%for(var i=0 ; i< hc.length ;i ++){%>
+                    <a href="/detail/<%=hc[i]._id%>">
+                        <p>
+                            <%=hc[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <span style="line-height: 30px;"><i class="fa fa-spinner fa-lg"></i> 首页 <i class="fa fa-chevron-right "> </i> 所有商品 <i class="fa fa-chevron-right "></i> 查询商品总计 : <strong style="font-size: 20px ; font-weight: bold; color: #B71B2C"><%=aCount%></strong> 条</span>
+    </div>
+    <div class="brand container">
+        <ul>
+            <li><img src="/images/brand_pic/201507231216573836711.png"></li>
+            <li><img src="/images/brand_pic/201507231216286442863.png"></li>
+            <li><img src="/images/brand_pic/201510191238511006727.jpg"></li>
+            <li><img src="/images/brand_pic/201510141509038990555.jpg"></li>
+            <li><img src="/images/brand_pic/201507231219473989885.png"></li>
+            <li><img src="/images/brand_pic/201507231228466340906.png"></li>
+            <li><img src="/images/brand_pic/201507231226331544351.png"></li>
+            <li><img src="/images/brand_pic/201507231230268918466.png"></li>
+            <li><img src="/images/brand_pic/201507231229596339640.png"></li>
+            <li><img src="/images/brand_pic/201608111649519402572.jpg"></li>
+        </ul>
+    </div>
+    <div class="container brand_title">
+        <span>品牌 ： </span>
+        <%for(var i =0 ;i<commodity.length;i++){%>
+            <span><%=commodity[i].brand%></span>
+            <%}%>
+    </div>
+    <hr>
+    <div class="container list">
+        <ul>
+            <%for(var i=0 ; i<commodity.length;i ++){%>
+                <li>
+                    <a href="/detail/<%=commodity[i]._id%>"><img src="/images/<%=commodity[i].mainpic%>"></a>
+                    <p>￥
+                        <%=commodity[i].price%>
+                    </p>
+                    <a href="/detail/<%=commodity[i]._id%>">
+                        <%=commodity[i].title%>
+                    </a>
+                </li>
+                <%}%>
+        </ul>
+    </div>
+    <!-- 在线咨询 -->
+    <div>
+        <div style="color: #fff" class='wmsContact' title='展开'>
+            手机淘宝
+        </div>
+        <div class='wmsOpen'>
+            <div class='wmsX'>X</div>
+        </div>
+    </div>
+    <!-- 回到顶部按钮 -->
+    <div id="topcontrol" title="回到顶部" style="position: fixed; bottom: 18px; right: 0px; opacity: 1; cursor: pointer;">
+        <img src="/images/topcontrol.png" alt="">
+    </div>
+    <div class="footer ">
+        <div class="container">
+            <ul class="icon_message">
+                <li>
+                    <img src="/images/footer/icon_1.jpg">
+                    <p>品牌授权</p>
+                </li>
+                <li>
+                    <img src="/images/footer/icon_2.jpg">
+                    <p>银行合作</p>
+                </li>
+                <li>
+                    <img src="/images/footer/icon_3.jpg">
+                    <p>客户口碑</p>
+                </li>
+                <li>
+                    <img src="/images/footer/icon_4.jpg">
+                    <p>专业售后</p>
+                </li>
+            </ul>
+            <div class="clear-float"></div>
+            <ul class="server_list">
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <img src="/images/footer/tel.jpg">
+                </li>
+            </ul>
+            <p>埃森商城网站 Copyright2015-2016.All Rights Reserved</p>
+        </div>
+    </div>
+    <p class="margin-bottom"><span>技术支持：大金鱼 </span> <span>视觉设计：金鱼创想广告</span></p>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="/javascripts/list.js"></script>
+</body>
+
+</html>

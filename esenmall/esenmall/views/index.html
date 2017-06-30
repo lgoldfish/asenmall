@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>焊割设备及配件营销中心---首页</title>
+    <!-- Bootstrap -->
+    <!-- <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="head_top bgc margin-bottom">
+        <div class="container  ">
+            <span><a href="#" id="favorites">收藏本页</a></span>
+            <span class="phone_number">
+                <span><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>0536-8572582</span>
+            <span><i class="glyphicon glyphicon-phone"></i>手机商城</span>
+            </span>
+        </div>
+    </div>
+    <div class="container margin-bottom ">
+
+    <%for(var x=0;x<banner.length;x++){%>
+                    <%if(banner[x].id=="banner01"){%>
+                       <img class="banner01" src="images/<%=banner[x].img%>">
+                        <%}%>
+                            <%}%>
+            <!-- 时钟特效 -->
+                <div class="clock" >
+                    <div id="txt">
+                        <div class="f1">
+                            <span id="txt1"></span><span id="txt2"></span>
+                        </div>
+                        <div class="f2">
+                            <p id="txt3"></p>
+                            <p id="txt4"></p>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    <div class="container logo">
+        <img src="images/logo.jpg" alt="">
+        <form  class="sousou" action="/find">
+            <input type="text" name="find" placeholder="搜索 &nbsp  型号/系列/品牌">
+            <button><img src="/images/model/sousuo.jpg"></button>
+        </form>
+    </div>
+    <div class="container">
+        <ul class="nav">
+            <li class="show01"><a href="javascript:void(0);">产品分类</a></li>
+            <li><a href="/">首页</a></li>
+            <li><a href="/allList">所有商品</a></li>
+            <li><a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')">网上商城</a></li>
+            <li><a href="/aboutUs">关于我们</a></li>
+            <li><a href="javascript:void(0);" onclick="window.open('http://www.sgdhj.net/')">埃森自动化</a></li>
+        </ul>
+    </div>
+    <div class="container nav_main">
+        <ul class="nav_left">
+            <li><a href="/list/智能仓储">智能仓储</a></li>
+            <li><a href="/list/焊接设备">焊接设备</a></li>
+            <li><a href="/list/切割设备">切割设备</a></li>
+            <li><a href="/list/电焊机">电焊机</a></li>
+            <li><a href="/list/辅具类">辅具类</a></li>
+            <li><a href="/list/焊接配件">焊接配件</a></li>
+            <li><a href="/list/切割配件">切割配件</a></li>
+            <li><a href="/list/劳动保护">劳动保护</a></li>
+            <li><a href="/list/工业五金">工业五金</a></li>
+            <li><a href="/list/焊材">焊材</a></li>
+        </ul>
+        <ul class="nav_left_show">
+            <li class="bgc">
+                <h4>智能仓储</h4>
+                <%for(var i=0 ; i< zncs.length ;i ++){%>
+                    <a href="/detail/<%=zncs[i]._id%>">
+                        <p>
+                            <%=zncs[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>焊接设备</h4>
+                <%for(var i=0 ; i< hjsb.length ;i ++){%>
+                    <a href="/detail/<%=hjsb[i]._id%>">
+                        <p>
+                            <%=hjsb[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>切割设备</h4>
+                <%for(var i=0 ; i< qgsb.length ;i ++){%>
+                    <a href="/detail/<%=qgsb[i]._id%>">
+                        <p>
+                            <%=qgsb[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>电焊机</h4>
+                <%for(var i=0 ; i< dhj.length ;i ++){%>
+                    <a href="/detail/<%=dhj[i]._id%>">
+                        <p>
+                            <%=dhj[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>辅具类</h4>
+                <%for(var i=0 ; i< fjl.length ;i ++){%>
+                    <a href="/detail/<%=fjl[i]._id%>">
+                        <p>
+                            <%=fjl[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>焊接配件</h4>
+                <%for(var i=0 ; i< hjpj.length ;i ++){%>
+                    <a href="/detail/<%=hjpj[i]._id%>">
+                        <p>
+                            <%=hjpj[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>切割配件</h4>
+                <%for(var i=0 ; i< qgpj.length ;i ++){%>
+                    <a href="/detail/<%=qgpj[i]._id%>">
+                        <p>
+                            <%=qgpj[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>劳动保护</h4>
+                <%for(var i=0 ; i< ldbh.length ;i ++){%>
+                    <a href="/detail/<%=ldbh[i]._id%>">
+                        <p>
+                            <%=ldbh[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>工业五金</h4>
+                <%for(var i=0 ; i< gywj.length ;i ++){%>
+                    <a href="/detail/<%=gywj[i]._id%>">
+                        <p>
+                            <%=gywj[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="bgc">
+                <h4>焊材</h4>
+                <%for(var i=0 ; i< hc.length ;i ++){%>
+                    <a href="/detail/<%=hc[i]._id%>">
+                        <p>
+                            <%=hc[i].title%>
+                        </p>
+                    </a>
+                    <%}%>
+            </li>
+        </ul>
+        <div class="banner02">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="2000">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+
+                   <%for(var x=0;x<banner.length;x++){%>
+                    <%if(banner[x].id=="carousel1"){%>
+                       <img class="banner01" src="images/<%=banner[x].img%>">
+                        <%}%>
+                            <%}%>         
+                    </div>
+                    <div class="item ">
+                         <%for(var x=0;x<banner.length;x++){%>
+                    <%if(banner[x].id=="carousel2"){%>
+                       <img class="banner01" src="images/<%=banner[x].img%>">
+                        <%}%>
+                            <%}%>  
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 媒体板块，来自王明晟 -->
+    <div class='wmsMedia'>
+        <div class='wmsMediatitle'>
+            [&nbsp;媒&nbsp;体&nbsp;]
+        </div>
+        <div class='wmsMediacontainer'>
+            <div class='wmsMedialeft'>
+                <div class='wmsLunbonumber'>
+                    <ul>
+                        <li id='wmsBase'>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+                <div class='wmsLunbo'>
+                    <ul>
+                        <li>
+                            <a href="<%=lbt[0].newslink%>"><img src="images/<%=lbt[0].newspic%>" alt=""></a>
+                            <div class='wmsLunbobottom'>
+                                <%=lbt[0].newstitle%>
+                            </div>
+                            <span class='wmsBgc'></span>
+                        </li>
+                        <li>
+                            <a href="<%=lbt[1].newslink%>"><img src="images/<%=lbt[1].newspic%>" alt=""></a>
+                            <div class='wmsLunbobottom'>
+                                <%=lbt[1].newstitle%>
+                            </div>
+                            <span class='wmsBgc2'></span>
+                        </li>
+                        <li>
+                            <a href="<%=lbt[2].newslink%>"><img src="images/<%=lbt[2].newspic%>" alt=""></a>
+                            <div class='wmsLunbobottom'>
+                                <%=lbt[2].newstitle%>
+                            </div>
+                            <span class='wmsBgc3'></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class='wmsLeftcontent'>
+                    行业咨询
+                    <span>
+                        <a style="color: #fff" href="http://www.weldinfo.net/">More >></a>
+                    </span>
+                </div>
+                <div class='wmsLeftlist'>
+                    <ul>
+                        <%for(var i=0 ; i< news.length;i++){%>
+                            <li>
+                                <a href="<%=news[i].newslink2%>">
+                                    <%=news[i].mewstitle2%>
+                                </a>
+                            </li>
+                            <%}%>
+                    </ul>
+                </div>
+            </div>
+            <div class='wmsMediamiddle'>
+                <%for(var x=0;x<mediapic.length;x++){%>
+                    <%if(mediapic[x].id=="img1"){%>
+                        <a href="/list/焊接设备"><img src="images/<%=mediapic[x].img%>" alt=""></a>
+                        <%}%>
+                            <%}%>
+            </div>
+            <div class='wmsMediaright'>
+                <div class='wmsRightimg'>
+                    <div class=wmsRightimg1>
+                        <%for(var x=0;x<mediapic.length;x++){%>
+                            <%if(mediapic[x].id=="img2"){%>
+                                <a href="/list/电焊机"><img src="images/<%=mediapic[x].img%>" alt=""></a>
+                                <%}%>
+                                    <%}%>
+                    </div>
+                    <div class='wmsRightimg2'>
+                        <%for(var x=0;x<mediapic.length;x++){%>
+                            <%if(mediapic[x].id=="img3"){%>
+                                <a href="/list/焊接配件"><img src="images/<%=mediapic[x].img%>" alt=""></a>
+                                <%}%>
+                                    <%}%>
+                    </div>
+                </div>
+                <div class='wmsRightimg3'>
+                    <%for(var x=0;x<mediapic.length;x++){%>
+                        <%if(mediapic[x].id=="img4"){%>
+                            <a href="/list/切割设备"><img src="images/<%=mediapic[x].img%>" alt=""></a>
+                            <%}%>
+                                <%}%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <!-- 智能仓储  -->
+        <div class="tab" js-tab="2" id="wms1">
+            <a href="/list/智能仓储" class="content_title">1F [ 智能仓储 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/智能仓储">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/2_2.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=zncs[0]._id%>"><img src="images/<%=zncs[0].mainpic%>"></a>
+                                    <a href="/detail/<%=zncs[0]._id%>">
+                                        <%=zncs[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=zncs[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=zncs[1]._id%>"><img src="images/<%=zncs[1].mainpic%>"></a>
+                                    <a href="/detail/<%=zncs[1]._id%>">
+                                        <%=zncs[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=zncs[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=zncs[2]._id%>"><img src="images/<%=zncs[2].mainpic%>"></a>
+                                    <a href="/detail/<%=zncs[2]._id%>">
+                                        <%=zncs[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=zncs[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=zncs[3]._id%>"><img src="images/<%=zncs[3].mainpic%>"></a>
+                                    <a href="/detail/<%=zncs[3]._id%>">
+                                        <%=zncs[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=zncs[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/<%=zncs[4].mainpic%>">
+                                <a href="/detail/<%=zncs[4]._id%>">
+                                    <%=zncs[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=zncs[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--2 焊接设备 -->
+        <div class="tab" js-tab="2" id="wms2">
+            <a href="/list/焊接设备" class="content_title">2F [ 焊接设备 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/焊接设备">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/2.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hjsb[0]._id%>"><img src="images/<%=hjsb[0].mainpic%>"></a>
+                                    <a href="/detail/<%=hjsb[0]._id%>">
+                                        <%=hjsb[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hjsb[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hjsb[1]._id%>"><img src="images/<%=hjsb[1].mainpic%>"></a>
+                                    <a href="/detail/<%=hjsb[1]._id%>">
+                                        <%=hjsb[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hjsb[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hjsb[2]._id%>"><img src="images/<%=hjsb[2].mainpic%>"></a>
+                                    <a href="/detail/<%=hjsb[2]._id%>">
+                                        <%=hjsb[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hjsb[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hjsb[3]._id%>"><img src="images/<%=hjsb[3].mainpic%>"></a>
+                                    <a href="/detail/<%=hjsb[3]._id%>">
+                                        <%=hjsb[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hjsb[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images//<%=hjsb[4].mainpic%>">
+                                <a href="/detail/<%=hjsb[4]._id%>">
+                                    <%=hjsb[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=hjsb[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 切割设备 -->
+        <div class="tab" js-tab="2" id="wms3">
+            <a href="/list/切割设备" class="content_title">3F [ 切割设备 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/切割设备">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/3.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=qgsb[0]._id%>"><img src="images/<%=qgsb[0].mainpic%>"></a>
+                                    <a href="/detail/<%=qgsb[0]._id%>">
+                                        <%=qgsb[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=qgsb[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=qgsb[1]._id%>"><img src="images/<%=qgsb[1].mainpic%>"></a>
+                                    <a href="/detail/<%=qgsb[1]._id%>">
+                                        <%=qgsb[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=qgsb[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=qgsb[2]._id%>"><img src="images/<%=qgsb[2].mainpic%>"></a>
+                                    <a href="/detail/<%=qgsb[2]._id%>">
+                                        <%=qgsb[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=qgsb[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=qgsb[3]._id%>"><img src="images/<%=qgsb[3].mainpic%>"></a>
+                                    <a href="/detail/<%=qgsb[3]._id%>">
+                                        <%=qgsb[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=qgsb[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images//<%=qgsb[4].mainpic%>">
+                                <a href="/detail/<%=qgsb[4]._id%>">
+                                    <%=qgsb[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=qgsb[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container margin-bottom ">
+            <%for(var x=0;x<banner.length;x++){%>
+                    <%if(banner[x].id=="banner02"){%>
+                       <img class="banner01" src="images/<%=banner[x].img%>">
+                        <%}%>
+                            <%}%>
+        </div>
+        <!-- 电焊机  -->
+        <div class="tab" js-tab="2" id="wms4">
+            <a href="/list/电焊机" class="content_title">4F [ 电焊机 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/电焊机">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/4.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=dhj[0]._id%>"><img src="images/<%=dhj[0].mainpic%>"></a>
+                                    <a href="/detail/<%=dhj[0]._id%>">
+                                        <%=dhj[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=dhj[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=dhj[1]._id%>"><img src="images/<%=dhj[1].mainpic%>"></a>
+                                    <a href="/detail/<%=dhj[1]._id%>">
+                                        <%=dhj[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=dhj[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=dhj[2]._id%>"><img src="images/<%=dhj[2].mainpic%>"></a>
+                                    <a href="/detail/<%=dhj[2]._id%>">
+                                        <%=dhj[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=dhj[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=dhj[3]._id%>"><img src="images/<%=dhj[3].mainpic%>"></a>
+                                    <a href="/detail/<%=dhj[3]._id%>">
+                                        <%=dhj[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=dhj[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images//<%=dhj[4].mainpic%>">
+                                <a href="/detail/<%=dhj[4]._id%>">
+                                    <%=dhj[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=dhj[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 辅具类 -->
+        <div class="tab" js-tab="2" id="wms5">
+            <a href="/list/辅具类" class="content_title">5F [ 辅具类 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/辅具类">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/5.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=fjl[0]._id%>"><img src="images/<%=fjl[0].mainpic%>"></a>
+                                    <a href="/detail/<%=fjl[0]._id%>">
+                                        <%=fjl[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=fjl[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=fjl[1]._id%>"><img src="images/<%=fjl[1].mainpic%>"></a>
+                                    <a href="/detail/<%=fjl[1]._id%>">
+                                        <%=fjl[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=fjl[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=fjl[2]._id%>"><img src="images/<%=fjl[2].mainpic%>"></a>
+                                    <a href="/detail/<%=fjl[2]._id%>">
+                                        <%=fjl[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=fjl[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=fjl[3]._id%>"><img src="images/<%=fjl[3].mainpic%>"></a>
+                                    <a href="/detail/<%=fjl[3]._id%>">
+                                        <%=fjl[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=fjl[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images//<%=fjl[4].mainpic%>">
+                                <a href="/detail/<%=fjl[4]._id%>">
+                                    <%=fjl[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=fjl[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 焊接配件 -->
+        <div class="tab" js-tab="2" id="wms6">
+            <a href="/list/焊接配件" class="content_title">6F [ 焊接配件 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/焊接配件">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/6.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hjpj[0]._id%>"><img src="images/<%=hjpj[0].mainpic%>"></a>
+                                    <a href="/detail/<%=hjpj[0]._id%>">
+                                        <%=hjpj[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hjpj[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hjpj[1]._id%>"><img src="images/<%=hjpj[1].mainpic%>"></a>
+                                    <a href="/detail/<%=hjpj[1]._id%>">
+                                        <%=hjpj[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hjpj[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hjpj[2]._id%>"><img src="images/<%=hjpj[2].mainpic%>"></a>
+                                    <a href="/detail/<%=hjpj[2]._id%>">
+                                        <%=hjpj[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hjpj[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hjpj[3]._id%>"><img src="images/<%=hjpj[3].mainpic%>"></a>
+                                    <a href="/detail/<%=hjpj[3]._id%>">
+                                        <%=hjpj[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hjpj[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images//<%=hjpj[4].mainpic%>">
+                                <a href="/detail/<%=hjpj[4]._id%>">
+                                    <%=hjpj[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=hjpj[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container margin-bottom ">
+            <%for(var x=0;x<banner.length;x++){%>
+                    <%if(banner[x].id=="banner03"){%>
+                       <img class="banner01" src="images/<%=banner[x].img%>">
+                        <%}%>
+                            <%}%>
+        </div>
+        <!-- 切割配件 -->
+        <div class="tab" js-tab="2" id="wms7">
+            <a href="/list/切割配件" class="content_title">7F [ 切割配件 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/切割配件">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/7.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=qgpj[0]._id%>"><img src="images/<%=qgpj[0].mainpic%>"></a>
+                                    <a href="/detail/<%=qgpj[0]._id%>">
+                                        <%=qgpj[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=qgpj[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=qgpj[1]._id%>"><img src="images/<%=qgpj[1].mainpic%>"></a>
+                                    <a href="/detail/<%=qgpj[1]._id%>">
+                                        <%=qgpj[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=qgpj[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=qgpj[2]._id%>"><img src="images/<%=qgpj[2].mainpic%>"></a>
+                                    <a href="/detail/<%=qgpj[2]._id%>">
+                                        <%=qgpj[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=qgpj[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=qgpj[3]._id%>"><img src="images/<%=qgpj[3].mainpic%>"></a>
+                                    <a href="/detail/<%=qgpj[3]._id%>">
+                                        <%=qgpj[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=qgpj[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images//<%=qgpj[4].mainpic%>">
+                                <a href="/detail/<%=qgpj[4]._id%>">
+                                    <%=qgpj[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=qgpj[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 劳动保护 -->
+        <div class="tab" js-tab="2" id="wms8">
+            <a href="/list/劳动保护" class="content_title">8F [ 劳动保护 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/劳动保护">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/8.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=ldbh[0]._id%>"><img src="images/<%=ldbh[0].mainpic%>"></a>
+                                    <a href="/detail/<%=ldbh[0]._id%>">
+                                        <%=ldbh[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=ldbh[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=ldbh[1]._id%>"><img src="images/<%=ldbh[1].mainpic%>"></a>
+                                    <a href="/detail/<%=ldbh[1]._id%>">
+                                        <%=ldbh[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=ldbh[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=ldbh[2]._id%>"><img src="images/<%=ldbh[2].mainpic%>"></a>
+                                    <a href="/detail/<%=ldbh[2]._id%>">
+                                        <%=ldbh[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=ldbh[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=ldbh[3]._id%>"><img src="images/<%=ldbh[3].mainpic%>"></a>
+                                    <a href="/detail/<%=ldbh[3]._id%>">
+                                        <%=ldbh[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=ldbh[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images//<%=ldbh[4].mainpic%>">
+                                <a href="/detail/<%=ldbh[4]._id%>">
+                                    <%=ldbh[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=ldbh[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 工业五金 -->
+        <div class="tab" js-tab="2" id="wms9">
+            <a href="/list/工业五金" class="content_title">9F [ 工业五金 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/工业五金">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/9.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=gywj[0]._id%>"><img src="images/<%=gywj[0].mainpic%>"></a>
+                                    <a href="/detail/<%=gywj[0]._id%>">
+                                        <%=gywj[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=gywj[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=gywj[1]._id%>"><img src="images/<%=gywj[1].mainpic%>"></a>
+                                    <a href="/detail/<%=gywj[1]._id%>">
+                                        <%=gywj[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=gywj[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=gywj[2]._id%>"><img src="images/<%=gywj[2].mainpic%>"></a>
+                                    <a href="/detail/<%=gywj[2]._id%>">
+                                        <%=gywj[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=gywj[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=gywj[3]._id%>"><img src="images/<%=gywj[3].mainpic%>"></a>
+                                    <a href="/detail/<%=gywj[3]._id%>">
+                                        <%=gywj[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=gywj[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images//<%=gywj[4].mainpic%>">
+                                <a href="/detail/<%=gywj[4]._id%>">
+                                    <%=gywj[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=gywj[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container margin-bottom ">
+           <%for(var x=0;x<banner.length;x++){%>
+                    <%if(banner[x].id=="banner04"){%>
+                       <img class="banner01" src="images/<%=banner[x].img%>">
+                        <%}%>
+                            <%}%>
+        </div>
+        <!-- 焊材  -->
+        <div class="tab" js-tab="2" id="wms10">
+            <a href="/list/焊材" class="content_title">10F [ 焊材 ]</a>
+            <div class="tab-title" style="background-color: transparent;">
+            </div>
+            <a href="/list/焊材">>>> More</a>
+            <div class="tab-cont">
+                <ul class="tab-cont__wrap">
+                    <li class="item">
+                        <ul>
+                            <li><img src="images/model/10.jpg"></li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hc[0]._id%>"><img src="images/<%=hc[0].mainpic%>"></a>
+                                    <a href="/detail/<%=hc[0]._id%>">
+                                        <%=hc[0].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hc[0].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hc[1]._id%>"><img src="images/<%=hc[1].mainpic%>"></a>
+                                    <a href="/detail/<%=hc[1]._id%>">
+                                        <%=hc[1].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hc[1].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hc[2]._id%>"><img src="images/<%=hc[2].mainpic%>"></a>
+                                    <a href="/detail/<%=hc[2]._id%>">
+                                        <%=hc[2].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hc[2].price%>
+                                    </p>
+                                </div>
+                                <div class="content_price">
+                                    <a href="/detail/<%=hc[3]._id%>"><img src="images/<%=hc[3].mainpic%>"></a>
+                                    <a href="/detail/<%=hc[3]._id%>">
+                                        <%=hc[3].title%>
+                                    </a>
+                                    <p>价格：
+                                        <%=hc[3].price%>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images//<%=hc[4].mainpic%>">
+                                <a href="/detail/<%=hc[4]._id%>">
+                                    <%=hc[4].title%>
+                                </a>
+                                <p>价格：
+                                    <%=hc[4].price%>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container margin-bottom ">
+           <%for(var x=0;x<banner.length;x++){%>
+                    <%if(banner[x].id=="banner05"){%>
+                       <img style="height:350px"  class="banner01" src="images/<%=banner[x].img%>">
+                        <%}%>
+                            <%}%>
+        </div>
+    </div>
+    <div class="container">
+        <!-- 楼梯导航 -->
+        <ul class='wmsFloor'>
+            <li>1F</li>
+            <li>2F</li>
+            <li>3F</li>
+            <li>4F</li>
+            <li>5F</li>
+            <li>6F</li>
+            <li>7F</li>
+            <li>8F</li>
+            <li>9F</li>
+            <li>10F</li>
+        </ul>
+    </div>
+    <!-- 在线咨询 -->
+    <div>
+        <div style="color: #fff" class='wmsContact' title='展开'>
+            手机淘宝
+        </div>
+        <div class='wmsOpen'>
+            <div class='wmsX'>X</div>
+        </div>
+    </div>
+    <!-- 回到顶部按钮 -->
+    <div id="topcontrol" title="回到顶部" style="position: fixed; bottom: 18px; right: 0px; opacity: 1; cursor: pointer;">
+        <img src="images/topcontrol.png" alt="">
+    </div>
+    <div class="footer ">
+        <div class="container">
+            <ul class="icon_message">
+                <li>
+                    <img src="images/footer/icon_1.jpg">
+                    <p>品牌授权</p>
+                </li>
+                <li>
+                    <img src="images/footer/icon_2.jpg">
+                    <p>银行合作</p>
+                </li>
+                <li>
+                    <img src="images/footer/icon_3.jpg">
+                    <p>客户口碑</p>
+                </li>
+                <li>
+                    <img src="images/footer/icon_4.jpg">
+                    <p>专业售后</p>
+                </li>
+            </ul>
+            <div class="clear-float"></div>
+            <ul class="server_list">
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <img src="images/footer/tel.jpg">
+                </li>
+            </ul>
+            <p>埃森商城网站 Copyright2015-2016.All Rights Reserved</p>
+        </div>
+    </div>
+    <p class="margin-bottom"><span>技术支持：大金鱼 </span> <span>视觉设计：金鱼创想广告</span></p>
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/index.js"></script>
+<script type="text/javascript">
+</script>
+
+</html>

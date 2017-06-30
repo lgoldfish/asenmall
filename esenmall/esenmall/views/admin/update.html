@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>商品更新页</title>
+    <!-- Bootstrap -->
+    <!-- <link href="../stylesheets/bootstrap.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../../../font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheets/home.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 左侧导航菜单 -->
+    <div>
+        <nav class="navbar navbar-default ">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!-- <a class="navbar-brand" href="#">Brand</a> -->
+                    <span style="color:#fff" class=" navbar-brand glyphicon glyphicon-home" aria-hidden="true"></span>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">管理控制台</a>
+                        </li>
+                        <li><a href="/">返回前台首页</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">用户名：admin</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="nav_main" style="height: 690px">
+        <ul>
+            <li><a href="/admin/home/regist"><i class=" fa fa-user-o"></i>用户中心</a></li>
+            <li><a href="/admin/home/banner"><i class="fa fa-file-image-o"></i>banner图</a></li>
+            <li><a href="/admin/home/media"><i class="fa fa-camera"></i>媒体板块</a></li>
+            <li><a href="/admin/home/commodityAdd"><i class="fa fa-shopping-basket"></i>商品添加</a></li>
+            <li class="moreList"><a href="/admin/home"><i class="fa fa-object-group"></i>商品管理</a>
+                <ul>
+                    <li><a href="javascript:void(0);">智能仓储</a></li>
+                    <li><a href="javascript:void(0);">焊接设备</a></li>
+                    <li><a href="javascript:void(0);">切割设备</a></li>
+                    <li><a href="javascript:void(0);">电焊机</a></li>
+                    <li><a href="">辅机具</a></li>
+                    <li><a href="javascript:void(0);">焊接配件</a></li>
+                    <li><a href="javascript:void(0);">切割配件</a></li>
+                    <li><a href="javascript:void(0);">劳动保护</a></li>
+                    <li><a href="javascript:void(0);">工业五金</a></li>
+                    <li><a href="javascript:void(0);">焊材</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+   <div class="content">
+        <h1 class="text-center">商品内容修改页面</h1>
+        <div class="container" style="display: block;">
+                <div class="row col-md-offset-1">
+                    <form method="POST"  action="/admin/home/reupdate" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="type" class="col-sm-2 control-label">选择商品类目</label>
+                            <div class="col-sm-8">
+                                <select name="id" id="type" class="form-control">
+                                    <option><%=value.id%> </option>
+                                    <option value="智能仓储">智能仓储</option>
+                                    <option value="焊接设备">焊接设备</option>
+                                    <option value="切割设备">切割设备</option>
+                                    <option value="电焊机">电焊机</option>
+                                    <option value="辅具类">辅具类</option>
+                                    <option value="焊接配件">焊接配件</option>
+                                    <option value="切割配件">切割配件</option>
+                                    <option value="劳动保护">劳动保护</option>
+                                    <option value="工业五金">工业五金</option>
+                                    <option value="焊材"> 焊材</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="col-sm-2 control-label">商品名称</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="title" id="title" value="<%=value.title%>" placeholder="商品名称">
+                            </div>
+                        </div>
+                        <input type='text' name='_id' value='<%=value._id%>' hidden>
+                        <div class="form-group">
+                            <label for="brand" class="col-sm-2 control-label">品牌名称</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="brand" id="brand" value="<%=value.brand%>" placeholder="品牌名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="model" class="col-sm-2 control-label">商品型号</label>
+                            <div class="col-sm-8">
+                                <input type="text" required name="model" class="form-control" id="model" value="<%=value.model%>" placeholder="商品型号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="price" class="col-sm-2 control-label">商品价格</label>
+                            <div class="col-sm-8">
+                                <input type="number" step="0.01" required name="price" class="form-control" id="price" value="<%=value.price%>" placeholder="价格">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="describe" class="col-sm-2 control-label">商品描述</label>
+                            <div class="col-sm-8">
+                                <textarea type="text" class="form-control" name="describe" id="describe" required  placeholder="添加商品描述"><%=value.describe%></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mainpic" class="col-sm-2 control-label">商品展示主图</label>
+                            <div class="col-sm-8">
+                                <input type="file" name="mainpic" id="mainpic">
+                                <span class="help-block">支持上传一张照片（图片尺寸为350*350像素）
+                                
+                                </span>
+                                <div><img style="width: 150px" src="/images/<%=value.mainpic%>"> </div>
+                            </div>
+                        </div>
+                       <!--  <div class="form-group">
+                            <label for="images" class="col-sm-2 control-label">商品详情图片</label>
+                            <div class="col-sm-8">
+                                <input type="file" required name="images" id="images" multiple>
+                                <span class="help-block">支持上传多张照片(图片尺寸宽度为750像素)</span>
+                            </div>
+                        </div> -->
+                        
+                        <button type="submit" class="btn btn-default btn-success col-md-offset-5">修改提交</button>
+                        <span class="text-danger"><%=title%></span>
+                    </form>
+                </div>
+            </div>
+   </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../../javascripts/bootstrap.min.js"></script>
+</body>
+
+</html>

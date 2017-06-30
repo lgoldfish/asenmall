@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>管理账号注册</title>
+    <!-- Bootstrap -->
+    <!-- <link href="../stylesheets/bootstrap.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 左侧导航菜单 -->
+    <div>
+        <nav class="navbar navbar-default ">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!-- <a class="navbar-brand" href="#">Brand</a> -->
+                    <span style="color:#fff" class=" navbar-brand glyphicon glyphicon-home" aria-hidden="true"></span>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/admin/home">管理控制台</a>
+                        </li>
+                        <li><a href="/">返回前台首页</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                     <li style="line-height: 50px;margin-right: 600px;">操作状态：<i style="color: red"><%=status%></i></li>
+                        <li><a href="#">用户名：<%=username%></a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="nav_main" style="height: 690px">
+        <ul>
+            <li><a href="/admin/home/regist"><i class=" fa fa-user-o"></i>用户中心</a></li>
+            <li><a href="/admin/home/banner"><i class="fa fa-file-image-o"></i>banner图</a></li>
+            <li><a href="/admin/home/media"><i class="fa fa-camera"></i>媒体板块</a></li>
+            <li><a href="/admin/home/commodityAdd"><i class="fa fa-shopping-basket"></i>商品添加</a></li>
+            <li class="moreList"><a href="/admin/home"><i class="fa fa-object-group"></i>商品管理</a>
+                <ul>
+                    <li><a href="javascript:void(0);">智能仓储</a></li>
+                    <li><a href="javascript:void(0);">焊接设备</a></li>
+                    <li><a href="javascript:void(0);">切割设备</a></li>
+                    <li><a href="javascript:void(0);">电焊机</a></li>
+                    <li><a href="">辅机具</a></li>
+                    <li><a href="javascript:void(0);">焊接配件</a></li>
+                    <li><a href="javascript:void(0);">切割配件</a></li>
+                    <li><a href="javascript:void(0);">劳动保护</a></li>
+                    <li><a href="javascript:void(0);">工业五金</a></li>
+                    <li><a href="javascript:void(0);">焊材</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content" >
+        <!-- 用户中心板块 -->
+        <div class="user">
+            <h1 class="text-center">管理人员账号注册页面</h1>
+            <form class="form-horizontal " action="/admin/home/regist" method="POST">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="text" required name="username" class="form-control" id="inputEmail3" placeholder="用户名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="password" required name="password" class="form-control" id="inputPassword3" placeholder="密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="password" required name="password2" class="form-control" id="inputPassword3" placeholder="再次输入密码">
+                    </div>
+                </div>
+                <div class="form-group" style="margin:30px auto">
+                    <div class="col-sm-offset-3 col-sm-10">
+                        <button type="submit" style="width: 100px;" class="btn btn-default btn-danger">注 册</button>
+                        <span class="text-primary"><%=status%></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+</body>
+
+</html>
