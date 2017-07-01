@@ -10,15 +10,12 @@ router.get('/', function(req, res, next) {
    Media.find({}).sort({"_id":-1}).then((data3)=>{
     // banner图查询
     Banner.find().then((data1) => {
-      console.log("---------------",data1)
         Commodity.find({}).sort({ '_id': -1 }).then((data2) => {
    
       //遍历筛选Media 数据
       var lbt=[];var news=[];var mediapic=[];
 
       for(var i in data3){
-
-        console.log()
         if(data3[i]["newstitle"]){
 
 
@@ -47,6 +44,7 @@ router.get('/', function(req, res, next) {
               case "焊材":hc.push(data2[i]);break;
             }
          } 
+         console.log("1111111111111111111111")
             res.render("index", {
                 banner: data1,
                 zncs,hjsb,qgsb,dhj,fjl,hjpj,qgpj,ldbh,gywj,hc,

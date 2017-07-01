@@ -78,7 +78,7 @@ $(window).scroll(function(){
         $('.wmsFloor ').css("display","none")
    }
     var a=$(window).scrollTop();
-    console.log(a)
+    // console.log(a)
     if(1176<a && a<1580){
         $('.wmsFloor li').eq(0).css('color','#b81c2b').siblings().css('color','#858685')
     }else if(1580<=a && a<1960){
@@ -115,7 +115,7 @@ $(window).scroll(function(){
         $(ele).click(function(){
             var i=$(ele).index();
             var a='#wms'+(i+1);
-            console.log(a);
+            // console.log(a);
             $('body,html').animate({scrollTop:$(a).offset().top},500);
 
         })
@@ -137,7 +137,7 @@ $("#topcontrol").click(function() {
 // 时钟特效-----------------
 function startTime() {
     var today = new Date()
-    console.log(today)
+    // console.log(today)
     var h = today.getHours()
     var m = today.getMinutes()
     var s = today.getSeconds()
@@ -187,4 +187,62 @@ function checkTime(i) {
 startTime()
 setInterval(startTime,1000)
 // ------------------------
+
+
+// 左侧手拉面板--------------------------------------
+
+$('.wmsDrag').on('mousedown', function(e) {
+
+
+        $(document).on('mousemove.drag', function(e) {
+            e.preventDefault();
+            $('.wmsLefthidden').offset({
+                left: e.pageX - 325
+            });
+        });
+
+        $(document).on('mouseup', function(e) {
+            $(document).off('mousemove.drag');
+            $('.wmsLefthidden').stop().animate({
+                'top': '150px',
+                'left': document.body.clientWidth/2 -300 ,
+                'width': '600px',
+                "border-radius":"40px",
+            }, 500);
+            $(document).off('mouseup')
+
+
+
+
+
+            setTimeout(function() {
+                $('.wmsDrag').css('display', 'none');
+                $('.wmsDrag2').css('display', 'block');
+                $(".wmsText").css("display", "none")
+                $(".showUs").css("display", "block")
+
+            }, 500)
+        });
+
+    });
+
+
+    $('.wmsDrag2').click(function() {
+        $(".showUs").css("display", "none")
+        $(".wmsText").css("display", "block")
+        $('.wmsLefthidden').stop().animate({
+            'top': '150px',
+            'left': '-300px',
+            'width': '300px',
+            "border-radius":"0"
+        }, 500);
+        setTimeout(function() {
+            $('.wmsDrag').css('display', 'block');
+            $('.wmsDrag2').css('display', 'none');
+            $('.wmsText').text('关于我们');
+            // $('.wmsText').css('width', '300px')
+
+
+        }, 500)
+    });
 })

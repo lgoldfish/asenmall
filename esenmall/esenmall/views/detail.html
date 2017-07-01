@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>焊割设备及配件营销中心---详情页</title>
-
     <!-- Bootstrap -->
-   <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/list.css">
-     <link rel="stylesheet" type="text/css" href="/stylesheets/detail.css">
-     <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/detail.css">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="head_top bgc margin-bottom">
         <div class="container  ">
-            <span>收藏</span>
+            <span><a href="#" id="favorites">收藏本页</a></span>
             <span class="phone_number">
         <span><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>0536-8572582</span>
-            <span><i class="glyphicon glyphicon-phone"></i>手机商城</span>
+            <span><i class="glyphicon glyphicon-phone"></i><a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')" style="color: #B71B2C;">网上商城</a></span>
             </span>
         </div>
     </div>
     <div class="container margin-bottom ">
-   <%for(var x=0;x<banner.length;x++){%>
-                    <%if(banner[x].id=="banner01"){%>
-                       <img class="banner01" src="/images/<%=banner[x].img%>">
-                        <%}%>
-                            <%}%>  
+        <%for(var x=0;x<banner.length;x++){%>
+            <%if(banner[x].id=="banner01"){%>
+                <img class="banner01" src="/images/<%=banner[x].img%>">
+                <%}%>
+                    <%}%>
     </div>
     <div class="container logo">
         <img src="../images/logo.jpg" alt="">
-        <form  class="sousou" action="/find">
+        <form class="sousou" action="/find">
             <input type="text" name="find" placeholder="搜索 &nbsp  型号/系列/品牌">
             <button><img src="/images/model/sousuo.jpg"></button>
         </form>
     </div>
     <div class="container">
-       <ul class="nav">
+        <ul class="nav">
             <li class="show01"><a href="javascript:void(0);">产品分类</a></li>
             <li><a href="/">首页</a></li>
             <li><a href="/allList">所有商品</a></li>
@@ -56,7 +57,7 @@
         </ul>
     </div>
     <div class="container ">
-         <ul class="nav_left">
+        <ul class="nav_left">
             <li><a href="/list/智能仓储">智能仓储</a></li>
             <li><a href="/list/焊接设备">焊接设备</a></li>
             <li><a href="/list/切割设备">切割设备</a></li>
@@ -170,51 +171,43 @@
                     <%}%>
             </li>
         </ul>
-
-      </div> 
-      <div class="container">
-        <span  style="line-height: 50px;"><i class="fa fa-spinner fa-lg"></i> 首页 <i class="fa fa-chevron-right "></i>  <%=listname%>  <i class="fa fa-chevron-right "></i>  <%=title%> </span> 
-      </div>
-      <hr>
-     <div class="container detail_top">
-       <div class="mainpic">
-         <!-- <img src="/images/<%=commodity.mainpic%>"> -->
-
- 
-
-      <div class="box" id="box">
-          <img src="/images/<%=commodity.mainpic%>" alt="">
-          <div id="zoom"></div>
+    </div>
+    <div class="container">
+        <span style="line-height: 50px;"><i class="fa fa-spinner fa-lg"></i> 首页 <i class="fa fa-chevron-right "></i>  <%=listname%>  <i class="fa fa-chevron-right "></i>  <%=title%> </span>
+    </div>
+    <hr>
+    <div class="container detail_top">
+        <div class="mainpic">
+            <!-- <img src="/images/<%=commodity.mainpic%>"> -->
+            <div class="box" id="box">
+                <img src="/images/<%=commodity.mainpic%>" alt="">
+                <div id="zoom"></div>
+            </div>
+            <div class="bigbox" id="bigbox">
+                <img src="/images/<%=commodity.mainpic%>" alt="">
+            </div>
         </div>
-        <div class="bigbox" id="bigbox">
-          <img  src="/images/<%=commodity.mainpic%>" alt="">
+        <div class="detail_content">
+            <h4><%=commodity.title%></h4>
+            <p>品牌名称 ： <span><%=commodity.brand%></span></h4>
+                <p>商品型号 ： <span><%=commodity.model%></span></p>
+                <p>商品价格 ： <span>¥ <%=commodity.price%></span></p>
+                <p>商品描述 ： <span><%=commodity.describe%></span></p>
         </div>
-
-
-
-
-       </div>
-       <div class="detail_content">
-         <h4><%=commodity.title%></h4>
-         <p>品牌名称 ： <span><%=commodity.brand%></span></h4>
-         <p>商品型号 ： <span><%=commodity.model%></span></p>
-         <p>商品价格 ： <span>¥ <%=commodity.price%></span></p>
-         <p>商品描述 ： <span><%=commodity.describe%></span></p>
-       </div>    
-     </div>
-     <div class="container " >
-       <div class="detail_main">
-         <div class="detail_main_title"><span>商品详情</span></div>
-         <ul>
-           <%for(var i=0; i<images.length;i++){%>
-           <li>
-             <img width="750px" src="/images/<%=images[i]%>" >
-           </li>
-           <%}%>
-         </ul>
-       </div>
-     </div>
-   <!-- 在线咨询 -->
+    </div>
+    <div class="container ">
+        <div class="detail_main">
+            <div class="detail_main_title"><span>商品详情</span></div>
+            <ul>
+                <%for(var i=0; i<images.length;i++){%>
+                    <li>
+                        <img width="750px" src="/images/<%=images[i]%>">
+                    </li>
+                    <%}%>
+            </ul>
+        </div>
+    </div>
+    <!-- 在线咨询 -->
     <div>
         <div style="color: #fff" class='wmsContact' title='展开'>
             手机淘宝
@@ -223,77 +216,94 @@
             <div class='wmsX'>X</div>
         </div>
     </div>
-<!-- 回到顶部按钮 -->
+    <!-- 回到顶部按钮 -->
     <div id="topcontrol" title="回到顶部" style="position: fixed; bottom: 18px; right: 0px; opacity: 1; cursor: pointer;">
-    <img src="/images/topcontrol.png" alt="">
-</div>
-
-       <div class="footer ">
-      <div class="container">
-        <ul class="icon_message">
-          <li>
-            <img src="../images/footer/icon_1.jpg">
-            <p>品牌授权</p>
-          </li>
-          <li>
-            <img src="../images/footer/icon_2.jpg">
-            <p>银行合作</p>
-          </li>
-          <li>
-            <img src="../images/footer/icon_3.jpg">
-            <p>客户口碑</p>
-          </li>
-          <li>
-            <img src="../images/footer/icon_4.jpg">
-            <p>专业售后</p>
-          </li>
-        </ul>
-        <div class="clear-float"></div>
-        <ul class="server_list">
-          <li>
-            <p>新手</p>
-            <p><a href="">注册新会员</a></p>
-            <p><a href="">如何订购</a></p>
-            <p><a href="">正品保障</a></p>
-            <p><a href="">常见问题</a></p>
-          </li>
-          <li>
-            <p>新手</p>
-            <p><a href="">注册新会员</a></p>
-            <p><a href="">如何订购</a></p>
-            <p><a href="">正品保障</a></p>
-            <p><a href="">常见问题</a></p>
-          </li>
-          <li>
-            <p>新手</p>
-            <p><a href="">注册新会员</a></p>
-            <p><a href="">如何订购</a></p>
-            <p><a href="">正品保障</a></p>
-            <p><a href="">常见问题</a></p>
-          </li>
-          <li>
-            <p>新手</p>
-            <p><a href="">注册新会员</a></p>
-            <p><a href="">如何订购</a></p>
-            <p><a href="">正品保障</a></p>
-            <p><a href="">常见问题</a></p>
-          </li>
-          <li>
-            <p>新手</p>
-            <p><a href="">注册新会员</a></p>
-            <p><a href="">如何订购</a></p>
-            <p><a href="">正品保障</a></p>
-            <p><a href="">常见问题</a></p>
-          </li>
-          <li>
-            <img src="../images/footer/tel.jpg">
-          </li>
-        </ul>
-        <p>埃森商城网站 Copyright2015-2016.All Rights Reserved</p>
-      </div>
+        <img src="/images/topcontrol.png" alt="">
     </div>
-    <p class="margin-bottom"><span>技术支持：大金鱼 </span>  <span>视觉设计：金鱼创想广告</span></p>
+    <!-- 左侧面板拉出来 -->
+    <div class='wmsLefthidden'>
+        <div class='wmsDrag'>
+            <img src="/images/model/1_1.jpg" alt="" title='拉我'>
+        </div>
+        <div class='wmsDrag2'>
+            <img src="/images/model/1_2.jpg" alt="" title="点我关闭">
+        </div>
+        <div class='wmsText'>关于我们</div>
+        <div class="showUs">
+            <h2>埃森焊割设备及配件营销中心</h2>
+            <p>本中心成立于2005年，从事于焊割设备及配件销售服务十余年，年销售额达1000万元。十年老店，能够全面掌握全国焊割配件质量，始终真诚实意的为新老客户提供价格实惠、质量可靠的产品与服务。</p>
+            <p><i>主营产品：</i>各品牌电焊机、氩弧焊机、自动化工装、机器人焊接设备；批发各种优质焊割配件、焊接器材：二保焊焊枪、送丝机、割炬、二氧化碳表、等离子割枪、氩弧焊枪、焊钳、焊罩、焊机线、焊条、焊丝、磨光机、防堵膏、防溅剂、氧气管等及各种焊机维修。</p>
+            <p>商品详情及购买请访问: <i><a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"> 淘宝网上商城</a></i> </p>
+        </div>
+    </div>
+    <div class="footer ">
+        <div class="container">
+            <ul class="icon_message">
+                <li>
+                    <img src="../images/footer/icon_1.jpg">
+                    <p>品牌授权</p>
+                </li>
+                <li>
+                    <img src="../images/footer/icon_2.jpg">
+                    <p>银行合作</p>
+                </li>
+                <li>
+                    <img src="../images/footer/icon_3.jpg">
+                    <p>客户口碑</p>
+                </li>
+                <li>
+                    <img src="../images/footer/icon_4.jpg">
+                    <p>专业售后</p>
+                </li>
+            </ul>
+            <div class="clear-float"></div>
+            <ul class="server_list">
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <p>新手</p>
+                    <p><a href="">注册新会员</a></p>
+                    <p><a href="">如何订购</a></p>
+                    <p><a href="">正品保障</a></p>
+                    <p><a href="">常见问题</a></p>
+                </li>
+                <li>
+                    <img src="../images/footer/tel.jpg">
+                </li>
+            </ul>
+            <p>埃森商城网站 Copyright2015-2016.All Rights Reserved</p>
+        </div>
+    </div>
+    <p class="margin-bottom"><span>技术支持：大金鱼 </span> <span>视觉设计：金鱼创想广告</span></p>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/list.js"></script>
-  </body>
+    <script type="text/javascript" src="/javascripts/detail.js"></script>
+</body>
+
 </html>

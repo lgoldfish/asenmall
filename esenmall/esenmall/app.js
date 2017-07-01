@@ -40,6 +40,7 @@ app.use("/admin",admin);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
+  console.log("666666666666666")
   next(err);
 });
 
@@ -50,6 +51,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
+  console.log("5000000000000000")
   res.status(err.status || 500);
   res.render('error');
 });

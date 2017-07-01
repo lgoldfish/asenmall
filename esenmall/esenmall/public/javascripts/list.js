@@ -33,45 +33,74 @@ $(function() {
     $("#topcontrol").click(function() {
         $('html body').animate({ scrollTop: 0 }, 700)
     })
+// 收藏板块
+
+       $("#favorites").click(function(){
+           var ctrl=(navigator.userAgent.toLowerCase()).indexOf('mac')!=-1?'Command/Cmd': 'CTRL';
+           if(document.all){
+               window.external.addFavorite('http://blog.csdn.net/yilanyoumeng3', '前端秋秋');
+               }
+               else if(window.sidebar){
+                   window.sidebar.addPanel('前端秋秋', 'http://blog.csdn.net/yilanyoumeng3', "");
+                   }
+                   else{ alert('您可以通过快捷键' + ctrl + ' + D 加入到收藏夹');}
+           })
+
+// 左侧手拉面板--------------------------------------
+
+$('.wmsDrag').on('mousedown', function(e) {
 
 
-    // 放大镜功能-----------------------------
-   var box=document.getElementById('box');
-          var bigbox=document.getElementById('bigbox');
+        $(document).on('mousemove.drag', function(e) {
+            e.preventDefault();
+            $('.wmsLefthidden').offset({
+                left: e.pageX - 325
+            });
+        });
 
-          box.onmousemove=function(en){
+        $(document).on('mouseup', function(e) {
+            $(document).off('mousemove.drag');
+            $('.wmsLefthidden').stop().animate({
+                'top': '150px',
+                'left': document.body.clientWidth/2 -300 ,
+                'width': '600px',
+                "border-radius":"40px",
+            }, 500);
+            $(document).off('mouseup')
 
-             var e=en||window.event;
 
-             bigbox.style.display="block";
 
-             bigbox.style.left=box.offsetLeft+box.offsetWidth+5+'px';
-             bigbox.style.top=box.offsetTop+'px';
 
-             // 获取鼠标在小图上的位置
-             var x=e.clientX-box.offsetLeft;
-             var y=e.clientY+document.body.scrollTop-box.offsetTop;
-            console.log("e.clientY",e.clientY)
-             zoom.style.display="block";
 
-             // 求zoom的位置
-             var left=Math.min(Math.max(x-50,0),300);
-             var top=Math.min(Math.max(y-50,0),200);
+            setTimeout(function() {
+                $('.wmsDrag').css('display', 'none');
+                $('.wmsDrag2').css('display', 'block');
+                $(".wmsText").css("display", "none")
+                $(".showUs").css("display", "block")
 
-              console.log("top",top)
-             console.log("left",left)
+            }, 500)
+        });
 
-             zoom.style.left=left+'px';
-             zoom.style.top=top+'px';
+    });
 
-             bigbox.scrollLeft=left*4;
-             bigbox.scrollTop=top*4;
-        }
-      
-        box.onmouseout=function(){   
-            bigbox.style.display="none";
-            zoom.style.display="none";
-          }
-// ------------------------------------------
+
+    $('.wmsDrag2').click(function() {
+        $(".showUs").css("display", "none")
+        $(".wmsText").css("display", "block")
+        $('.wmsLefthidden').stop().animate({
+            'top': '150px',
+            'left': '-300px',
+            'width': '300px',
+            "border-radius":"0"
+        }, 500);
+        setTimeout(function() {
+            $('.wmsDrag').css('display', 'block');
+            $('.wmsDrag2').css('display', 'none');
+            $('.wmsText').text('关于我们');
+            // $('.wmsText').css('width', '300px')
+
+
+        }, 500)
+    });
 
 })

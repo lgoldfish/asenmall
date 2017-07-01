@@ -38,11 +38,10 @@ a {
 
 .phone_number span {
     text-align: right;
-    color: red;
+    color: #B71B2C;
     margin-right: 20px;
     line-height: 24px;
 }
-
 .phone_number span i {
     border-right: 2px solid #fff;
     margin-right: 5px;
@@ -77,16 +76,19 @@ a {
     float: left;
     height: 38px;
 }
+
 .nav>li:hover {
     background-color: #B71B2C;
 }
+
 .nav>li a:hover {
     color: #fff;
     background-color: transparent;
 }
+
 .nav li a {
     padding: 0 30px;
-    background-color:transparent;
+    background-color: transparent;
 }
 
 .nav li:nth-of-type(1) {
@@ -104,9 +106,11 @@ a {
     background-color: transparent;
     color: #fff;
 }
+
 .nav li:nth-of-type(1) a:active {
     background-color: transparent;
 }
+
 .nav li:nth-of-type(1) a:visited {
     background-color: transparent;
 }
@@ -115,9 +119,11 @@ a {
     color: #B71B2C;
     font-size: 18px;
 }
+
 .nav li:nth-of-type(2):hover {
     background-color: transparent;
 }
+
 .nav li:nth-of-type(2) a:hover {
     color: #B71B2C;
     font-size: 18px;
@@ -943,7 +949,7 @@ a {
     color: #c4c5c5;
     font-size: 16px;
     font-family: "微软雅黑";
-   opacity: 0.7;
+    opacity: 0.7;
 }
 
 .sousou button {
@@ -953,4 +959,78 @@ a {
 
 .sousou button img {
     height: 33.5px;
+}
+
+
+/*左侧手拉面板*/
+
+.wmsLefthidden {
+    position: fixed;
+    top: 150px;
+    width: 300px;
+    left: -300px;
+    background-color: #0176BA;
+    color: #fff;
+    padding: 20px 30px;
+    z-index: 100;
+}
+
+.wmsDrag {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: -50px;
+}
+
+.wmsDrag img,
+.wmsDrag2 img {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #0176BA;
+}
+
+.wmsDrag2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -20px;
+    right: -50px;
+    display: none
+}
+
+.wmsText {
+    font-size: 50px;
+    line-height: 200px;
+    text-align: center;
+    /*width: 300px;*/
+    height: 200px;
+}
+
+.showUs {
+    display: none;
+}
+
+.showUs h2 {
+    text-align: center;
+}
+
+.showUs p {
+    text-indent: 30px;
+    line-height: 30px;
+    padding: 10px 0;
+}
+
+.showUs p i {
+    font-weight: bold;
+}
+
+.showUs p i a {
+    font-weight: bold;
+    font-size: 20px;
+    color: orange;
+}
+
+.showUs p i a:hover {
+    color: #fff;
 }
