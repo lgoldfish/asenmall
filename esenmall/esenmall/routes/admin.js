@@ -128,6 +128,7 @@ function uploadData(req, res) {
                 console.log("req.body", req.body)
                 Banner.create(req.body).then((data) => {
                     if (data) {
+                        console.log("666666666666666666")
                         res.render("admin/banner", {
                             username: req.cookies.username,
                             status: "上传成功"

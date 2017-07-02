@@ -44,7 +44,6 @@ router.get('/', function(req, res, next) {
               case "焊材":hc.push(data2[i]);break;
             }
          } 
-         console.log("1111111111111111111111")
             res.render("index", {
                 banner: data1,
                 zncs,hjsb,qgsb,dhj,fjl,hjpj,qgpj,ldbh,gywj,hc,

@@ -39,7 +39,7 @@ $('.wmsLunbonumber ul li').each(function(i,ele){
         if(i>2){
             i=0
         }       
-    },2000);
+    },3000);
 
 
     $('.wmsMedialeft').mouseleave(function(){
@@ -51,7 +51,7 @@ $('.wmsLunbonumber ul li').each(function(i,ele){
         if(i>2){
             i=0
         }
-    },2000);
+    },3000);
         $('.wmsLunbo').mouseenter(function(){
             clearInterval(a)
         })

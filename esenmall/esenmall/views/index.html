@@ -183,11 +183,12 @@
             </li>
         </ul>
         <div class="banner02">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4000">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                 </ol>
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
@@ -195,14 +196,21 @@
 
                    <%for(var x=0;x<banner.length;x++){%>
                     <%if(banner[x].id=="carousel1"){%>
-                       <img class="banner01" src="images/<%=banner[x].img%>">
+                      <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"><img class="banner01" src="images/<%=banner[x].img%>"></a> 
                         <%}%>
                             <%}%>         
                     </div>
                     <div class="item ">
                          <%for(var x=0;x<banner.length;x++){%>
                     <%if(banner[x].id=="carousel2"){%>
-                       <img class="banner01" src="images/<%=banner[x].img%>">
+                      <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"> <img class="banner01" src="images/<%=banner[x].img%>"></a>
+                        <%}%>
+                            <%}%>  
+                    </div>
+                    <div class="item ">
+                         <%for(var x=0;x<banner.length;x++){%>
+                    <%if(banner[x].id=="carousel3"){%>
+                        <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"> <img class="banner01" src="images/<%=banner[x].img%>"></a>
                         <%}%>
                             <%}%>  
                     </div>
@@ -985,7 +993,7 @@
         <div class="container margin-bottom ">
            <%for(var x=0;x<banner.length;x++){%>
                     <%if(banner[x].id=="banner05"){%>
-                       <img style="height:350px"  class="banner01" src="images/<%=banner[x].img%>">
+                       <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/category-1035601667-1409722261.htm?spm=a1z10.5-c-s.w4010-15753720616.7.3641b08aAPjM2x&search=y&catName=%C9%EE%DB%DA%B9%CC%B0%EE%BA%B8%BB%FA#bd')"><img style="height:350px"  class="banner01" src="images/<%=banner[x].img%>"></a>
                         <%}%>
                             <%}%>
         </div>
