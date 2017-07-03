@@ -27,7 +27,7 @@
  		 mounted () {
      console.log('挂载好了')
      var mySwiper = new Swiper('.swiper-container', {
-       autoplay: 1000,
+       autoplay: 3000,
        direction: 'horizontal',
        loop: true,
        pagination: '.swiper-pagination',

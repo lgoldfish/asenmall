@@ -5,7 +5,7 @@
             <div >
                 <mu-raised-button class="callme_button" label="联系我们" @click="open2"/>
                 <mu-dialog :open="dialog2" title="联系我们" @close="close2">
-                电话：0536-8886982
+                电话：0536-8572582
                 <br>
                 email: asenhj@163.com
                  <mu-flat-button slot="actions" primary @click="close2" label="关闭"/>

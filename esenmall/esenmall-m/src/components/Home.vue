@@ -1,14 +1,9 @@
 <template>
   <div class="home">
   <swiper></swiper>
-    <div class="search">
-      <form>
-        <input type="text" name="" placeholder="搜索品牌/系列/型号">
-        <img src="assets/images/icon_search.jpg" >
-      </form>
-    </div>
+    <search></search>
     <div class="banner_bottom">
-      <a href="">
+      <a href="javascript:void(0);" onclick="window.open('http://shop.m.taobao.com/shop/shop_index.htm?spm=0.0.0.0&shop_id=115264735#list?catId=1035601667&catTxt=%E6%B7%B1%E5%9C%B3%E5%9B%BA%E9%82%A6%E7%84%8A%E6%9C%BA')" style="color: #B71B2C;">
         <img src="assets/images/moneybox.jpg" height="350" width="1225">
       </a>
     </div>
@@ -35,7 +30,7 @@
 import swiper from "./Swiper.vue"
 import TabBottom from "./TabBottom.vue"
 import "../assets/css/home.css"
-// console.log(swiper)
+import Search from "./Search.vue" 
 export default {
   name: 'home',
   data () {
@@ -57,7 +52,8 @@ export default {
   },
    components:{
     swiper,
-    TabBottom
+    TabBottom,
+    Search
   }
 }
 </script>

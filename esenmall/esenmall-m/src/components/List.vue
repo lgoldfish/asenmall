@@ -1,6 +1,7 @@
 <template >
   <div class="list" >
     <top-nav :formparent="listname"></top-nav>
+    <search></search>
     <!-- {{details}} -->
     <ul class="ul_list">
       <li v-for="detail in details">
@@ -25,6 +26,7 @@ import TabBottom from "./TabBottom.vue"
 import TopNav from "./TopNav.vue"
 import "../assets/css/reset.css"
 import "../assets/css/list.css"
+import Search from "./Search.vue" 
 export default {
   name: 'list',
   data () {
@@ -35,7 +37,8 @@ export default {
   },
   components:{
     TopNav,
-    TabBottom
+    TabBottom,
+    Search
   },
   created(){
      this.axios({

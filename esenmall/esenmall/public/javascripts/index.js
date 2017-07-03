@@ -245,4 +245,15 @@ $('.wmsDrag').on('mousedown', function(e) {
 
         }, 500)
     });
+// pc端、手机端网页切换
+ function isMobile() {
+        if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)))
+            return true;
+        else
+            return false;
+    }
+    
+    
+    if (isMobile() !== false)
+        window.location.href = "http://localhost:8080";
 })

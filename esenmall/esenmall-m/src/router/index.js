@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import List from '@/components/List'
 import Detail from '@/components/Detail'
+import Find from "@/components/Find"
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
     	path:"/detail",
     	name:"Detail",
     	component:Detail
+    },
+    {
+      path:"/find",
+      name:"Find",
+      component:Find
     }
   ]
 })

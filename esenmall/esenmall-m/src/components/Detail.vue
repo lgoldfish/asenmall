@@ -1,6 +1,7 @@
 <template>
   <div>
    <top-nav :formparent="listname"></top-nav>
+  <search></search>
   <div class="detail">
     <div class="prt_info">
       <div class="prt_info_title">
@@ -32,6 +33,7 @@
 
 <script>
 import TopNav from "./TopNav.vue"
+import Search from "./Search.vue" 
 import TabBottom from "./TabBottom.vue"
 import "../assets/css/detail.css"
 export default {
@@ -45,7 +47,8 @@ export default {
   },
   components:{
     TopNav,
-    TabBottom
+    TabBottom,
+     Search
   },
   created(){
      this.axios({

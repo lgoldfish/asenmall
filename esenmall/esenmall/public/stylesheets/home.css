@@ -96,3 +96,9 @@ cursor: pointer;
 	display: block;
     padding-left: 70px;
 }
+#bs-example-navbar-collapse-1 form {
+	visibility: hidden;
+}
+.nav_main ul li ul {
+	visibility: hidden;
+}
