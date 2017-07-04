@@ -6,6 +6,7 @@ var Banner = require(path.join(__dirname, "../models/Banner.js"))
 var Commodity = require(path.join(__dirname, "../models/Commodity.js"))
 var User = require(path.join(__dirname, "../models/User.js"))
 var Media = require(path.join(__dirname, "../models/Media.js"))
+var Feedback = require(path.join(__dirname, "../models/Feedback.js"))
 var multer = require('multer');
 var upload = multer({ dest: "public/images/" })
 var EventEmitter = require('events').EventEmitter;
@@ -48,8 +49,8 @@ router.get("/home", function(req, res) {
 router.post("/home/select", function(req, res) {
     var page = req.query.page || 1;
     var pageCount = 100;
-    Commodity.count({ id: req.body.id }).then((aCount) => {
-        Commodity.find({ id: req.body.id }).skip((page - 1) * pageCount).limit(pageCount).sort({ _id: -1 }).then((data) => {
+    Feedback.count({ id: req.body.id }).then((aCount) => {
+        Feedback.find({ id: req.body.id }).skip((page - 1) * pageCount).limit(pageCount).sort({ _id: -1 }).then((data) => {
             console.log("Commodity数据", data)
             res.render("admin/home", {
                 title: "查询成功",
@@ -564,5 +565,67 @@ function uploadData2(req, res) {
     }
 }
 
+// 客户留言管理---------------------------------------------------
+router.get("/home/feedback", function(req, res) {
+        if (req.cookies.username) {
+            var page = req.query.page || 1;
+            var pageCount = 4;
+            Feedback.count().then((aCount) => {
+                Feedback.find({}).skip((page - 1) * pageCount).limit(pageCount).sort({ _id: -1 }).then((data) => {
+                    res.render("admin/feedback", {
+                        title: "待操作",
+                        username: req.cookies.username,
+                        count: aCount,
+                        feedbacks: data,
+                        commodityCount: Math.ceil(aCount / pageCount),
+                        currentPage: page
+                    })
+
+                }, (err) => {
+                    res.send("err", err)
+                })
+
+            }, (err) => {
+                console.log("查询数据总条数失败")
+            })
+        } else {
+            res.redirect("/admin")
+        }
+    })
+    // 删除留言路由--------------------------------------------
+router.get("/home/feedback/:id", function(req, res) {
+    // console.log("req.params.id", req.params.id)
+    if (req.cookies.username) {
+        Feedback.remove({ _id: req.params.id }).then((data6) => {
+            // console.log("8888888888888888", data6)
+            var page = req.query.page || 1;
+            var pageCount = 4;
+            Feedback.count().then((aCount) => {
+                Feedback.find({}).skip((page - 1) * pageCount).limit(pageCount).sort({ _id: -1 }).then((data) => {
+                    console.log("8888888888888888", data)
+                    res.render("admin/feedback", {
+                        title: "删除成功",
+                        username: req.cookies.username,
+                        count: aCount,
+                        feedbacks: data,
+                        commodityCount: Math.ceil(aCount / pageCount),
+                        currentPage: page
+                    })
+
+                }, (err) => {
+                    res.send("err", err)
+                })
+
+            }, (err) => {
+                console.log("查询数据总条数失败")
+            })
+        }, (err) => {
+            res.send("删除失败")
+        })
+
+    } else {
+        res.redirect("/admin")
+    }
+})
 
 module.exports = router;

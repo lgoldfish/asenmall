@@ -1034,3 +1034,54 @@ a {
 .showUs p i a:hover {
     color: #fff;
 }
+/*客户留言板块*/
+.feedbackLeave {
+            width: 1225px;
+            height: 600px;
+            margin:10px auto 30px;
+            box-sizing:border-box;
+            
+            
+        }
+        .feedbackMessage {
+            width: 625px;
+            height: 500px;
+            margin:0 auto;
+
+        }
+        .feedbackMessage textarea {
+            resize: vertical;
+            margin-top:20px;
+            margin-left:20px;
+        }
+        .feedbackMessage input {
+            margin-top:20px;
+            margin-left:20px;
+
+        }
+        .feedbackMessage span {
+            text-align:right;
+        }
+        .feedbackTextarea {
+            position:relative;
+            top:-80px;
+            
+        }
+        .feedbackMessage input {
+            min-width: 250px;
+            height: 22px;
+
+        }
+        #sex {
+            min-width: 50px;
+            height: 16px;
+            outline: none;
+        }
+        .feedbackMessage button {
+        margin: 30px 200px;
+        width: 100px;
+        height: 25px;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 25px;           
+        }

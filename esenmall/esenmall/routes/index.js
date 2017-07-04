@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var path = require("path")
+var moment = require("moment")
 var Banner = require(path.join(__dirname, "../models/Banner.js"))
 var Commodity = require(path.join(__dirname, "../models/Commodity.js"))
 var Media = require(path.join(__dirname, "../models/Media.js"))
+var Feedback = require(path.join(__dirname, "../models/Feedback.js"))
     /* GET home page. */
 router.get('/', function(req, res, next) {
     // 查询媒体板块
@@ -547,10 +549,168 @@ router.get("/aboutUs", (req, res) => {
 
 })
 
+// 客户留言-------------------------------------------------------
 
+router.get("/feedback", (req, res) => {
+    Banner.find().then((data) => {
+        Commodity.find({}).sort({ '_id': -1 }).then((data2) => {
+            var zncs = [];
+            var hjsb = [];
+            var qgsb = [];
+            var dhj = [];
+            var fjl = [];
+            var hjpj = [];
+            var qgpj = [];
+            var ldbh = [];
+            var gywj = [];
+            var hc = [];
+            for (var i = 0; i < data2.length; i++) {
+                switch (data2[i].id) {
+                    case "智能仓储":
+                        zncs.push(data2[i]);
+                        break;
+                    case "焊接设备":
+                        hjsb.push(data2[i]);
+                        break;
+                    case "切割设备":
+                        qgsb.push(data2[i]);
+                        break;
+                    case "电焊机":
+                        dhj.push(data2[i]);
+                        break;
+                    case "辅具类":
+                        fjl.push(data2[i]);
+                        break;
+                    case "焊接配件":
+                        hjpj.push(data2[i]);
+                        break;
+                    case "切割配件":
+                        qgpj.push(data2[i]);
+                        break;
+                    case "劳动保护":
+                        ldbh.push(data2[i]);
+                        break;
+                    case "工业五金":
+                        gywj.push(data2[i]);
+                        break;
+                    case "焊材":
+                        hc.push(data2[i]);
+                        break;
+                }
+            }
+            res.render("feedback", {
+                banner: data,
+                zncs,
+                hjsb,
+                qgsb,
+                dhj,
+                fjl,
+                hjpj,
+                qgpj,
+                ldbh,
+                gywj,
+                hc,
+                status: ""
+            })
+        }, (err) => {
+            res.send("err", err)
+        })
 
+    }, (err) => {
+        console.log("err", err)
+    })
 
+})
 
+router.post("/feedback", (req, res) => {
+
+    Banner.find().then((data) => {
+        Commodity.find({}).sort({ '_id': -1 }).then((data2) => {
+            var zncs = [];
+            var hjsb = [];
+            var qgsb = [];
+            var dhj = [];
+            var fjl = [];
+            var hjpj = [];
+            var qgpj = [];
+            var ldbh = [];
+            var gywj = [];
+            var hc = [];
+            for (var i = 0; i < data2.length; i++) {
+                switch (data2[i].id) {
+                    case "智能仓储":
+                        zncs.push(data2[i]);
+                        break;
+                    case "焊接设备":
+                        hjsb.push(data2[i]);
+                        break;
+                    case "切割设备":
+                        qgsb.push(data2[i]);
+                        break;
+                    case "电焊机":
+                        dhj.push(data2[i]);
+                        break;
+                    case "辅具类":
+                        fjl.push(data2[i]);
+                        break;
+                    case "焊接配件":
+                        hjpj.push(data2[i]);
+                        break;
+                    case "切割配件":
+                        qgpj.push(data2[i]);
+                        break;
+                    case "劳动保护":
+                        ldbh.push(data2[i]);
+                        break;
+                    case "工业五金":
+                        gywj.push(data2[i]);
+                        break;
+                    case "焊材":
+                        hc.push(data2[i]);
+                        break;
+                }
+            }
+            req.body.subtime = moment(req.body.createtime).format("YYYY年MM月DD日 HH点mm分")
+            Feedback.create(req.body).then((data3) => {
+                res.render("feedback", {
+                    banner: data,
+                    zncs,
+                    hjsb,
+                    qgsb,
+                    dhj,
+                    fjl,
+                    hjpj,
+                    qgpj,
+                    ldbh,
+                    gywj,
+                    hc,
+                    status: "提交成功"
+                })
+            }, (err) => {
+                res.render("feedback", {
+                    banner: data,
+                    zncs,
+                    hjsb,
+                    qgsb,
+                    dhj,
+                    fjl,
+                    hjpj,
+                    qgpj,
+                    ldbh,
+                    gywj,
+                    hc,
+                    status: "提交成功"
+                })
+            })
+
+        }, (err) => {
+            res.send("err", err)
+        })
+
+    }, (err) => {
+        console.log("err", err)
+    })
+})
 
 
 

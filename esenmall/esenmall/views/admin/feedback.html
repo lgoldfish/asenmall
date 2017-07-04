@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>后台管理首页</title>
+    <title>后台商品管理页</title>
     <!-- Bootstrap -->
     <!-- <link href="../stylesheets/bootstrap.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -54,7 +54,7 @@
             <!-- /.container-fluid -->
         </nav>
     </div>
-    <div class="nav_main" style="height: 760px" >
+    <div class="nav_main" style="height: 820px">
         <ul>
             <li><a href="/admin/home/regist"><i class=" fa fa-user-o"></i>用户中心</a></li>
             <li><a href="/admin/home/banner"><i class="fa fa-file-image-o"></i>banner图</a></li>
@@ -78,66 +78,43 @@
         </ul>
     </div>
     <div class="content">
-        <!--  商品管理板块-->
-        <div style="display: block;" class="shanpinguanli container">
-            <h1 class="text-center">商品管理页面</h1><span class="text-primary">共计： <strong class="text-danger" style="font-size: 20px;font-weight: bold;"> <%=count%> </strong>  条记录</span>
-            <form method="POST" action="/admin/home/select"  class="form-horizontal flcxform">
-                <div class="form-group flcxselect " >
-                    <label for="type" class="col-sm-2 control-label">分类查询：</label>
-                    <div class="col-sm-8">
-                        <select name="id" id="type" class="form-control">
-                          <!--   <option value="全部商品">全部商品</option> -->
-                            <option value="智能仓储">智能仓储</option>
-                            <option value="焊接设备">焊接设备</option>
-                            <option value="切割设备">切割设备</option>
-                            <option value="电焊机">电焊机</option>
-                            <option value="辅具类">辅具类</option>
-                            <option value="焊接配件">焊接配件</option>
-                            <option value="切割配件">切割配件</option>
-                            <option value="劳动保护">劳动保护</option>
-                            <option value="工业五金">工业五金</option>
-                            <option value="焊材"> 焊材</option>
-                        </select>
-                    </div>
+        <!--  客户留言板块-->
+        <div class="shanpinguanli" style="padding: 20px;width: 1222px;margin: 0 auto">
+            <h1 class="text-center">客户留言管理页面</h1><span class="text-primary">共计： <strong class="text-danger" style="font-size: 20px;font-weight: bold;"><%=count%></strong>  条留言</span>
+            <div class="h5-messageRight" >
+                <div id="h5-message">
+                    <%for(var i =0; i<feedbacks.length;i++){%>
+                        <div class="h5-box">
+                            <div class="h5-avatar">
+                            <%if(feedbacks[i].sex=="先生"){%>
+                                <img width="100%" height="100%" src="/images/model/man.jpg">
+                            <%}else{%>
+                            <img width="100%" height="100%" src="/images/model/women.jpg">
+                            <%}%>
+                            </div>
+                            <div class="h5-name">
+                                <a href="#"><%=feedbacks[i].name%></a>
+                                <a style="color: #A94442;padding-left: 10px" href="#"><%=feedbacks[i].sex%></a>
+                            </div>
+                            <div class="h5-ratings">
+                                <p class="h5-company">公司名：<%=feedbacks[i].company%></p>
+                                <p class="h5-tel">联系电话：<%=feedbacks[i].tel%></p>
+                                <p class="h5-fax">传真：<%=feedbacks[i].fax%></p>
+                                <address class="h5-address">地址：<%=feedbacks[i].address%></address>
+                                <p class="h5-title" style="text-align: left;">主题：<%=feedbacks[i].title%></p>
+                                <textarea readonly="readonly" style="border:0px;font-size: 14px;line-height: 16px"><%=feedbacks[i].content%></textarea>
+                                <div class="h5-time">
+                                    <p>时间：<i style="color: #A94442;font-size: 12px"><%=feedbacks[i].subtime%></i></p>
+                                </div>
+                                <div class="h5-delete">
+                                    <a href="/admin/home/feedback/<%=feedbacks[i]._id%>">
+                                        <button  class="h5-btn">删除</button>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                        <%}%>
                 </div>
-                <button type="submit" class="btn btn-default btn-success flcx ">本类查询</button>
-                <a class="btn btn-default btn-primary allcx" href="/admin/home">全部查询</a>
-            </form>
-            <div>
-                <table class="table table-bordered table-striped " style="width: 1140px">
-                    <tr>
-                        <th>商品名称</th>
-                        <th>商品型号</th>
-                        <th>商品价格</th>
-                        <th>品牌名称</th>
-                        <th>商品类目</th>
-                        <th>商品主图</th>
-                        <th>操作（修改 / 删除）</th>
-                    </tr>
-                    <%commodity.forEach((value,i)=>{%>
-                        <tr>
-                            <td>
-                                <%=value.title%>
-                            </td>
-                            <td>
-                                <%=value.model%>
-                            </td>
-                            <td>
-                                <%=value.price%>
-                            </td>
-                            <td>
-                                <%=value.brand%>
-                            </td>
-                            <td>
-                                <%=value.id%>
-                            </td>
-                            <td><img style="width: 40px" src="/images/<%=value.mainpic%>"></td>
-                            <td><a href="/admin/home/update/<%=value._id%>/<%=value.mainpic%>" class="btn btn-primary margin">修改商品</a>
-                                <a href="/admin/home/remove/<%=value._id%>/<%=value.mainpic%>" class="btn btn-danger margin">删除商品</a>
-                            </td>
-                        </tr>
-                        <%})%>
-                </table>
             </div>
             <!-- 分页 -->
             <nav aria-label="Page navigation">
@@ -150,7 +127,7 @@
                         </li>
                         <% } else {%>
                             <li>
-                                <a href="/admin/home?page=<%=currentPage-1%>" aria-label="Previous">
+                                <a href="/admin/feedback?page=<%=currentPage-1%>" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
@@ -158,13 +135,13 @@
                                 <% for(var index=1;index<=commodityCount;index++){%>
                                     <% if(currentPage == index) {%>
                                         <li class="active">
-                                            <a href="/admin/home?page=<%=index%>">
+                                            <a href="/admin/home/feedback?page=<%=index%>">
                                                 <%=index%>
                                             </a>
                                         </li>
                                         <% } else {%>
                                             <li>
-                                                <a href="/admin/home?page=<%=index%>">
+                                                <a href="/admin/home/feedback?page=<%=index%>">
                                                     <%=index%>
                                                 </a>
                                             </li>
@@ -178,7 +155,7 @@
                                                         </li>
                                                         <% } else {%>
                                                             <li>
-                                                                <a href="/admin/home?page=<%=parseInt(currentPage)+1%>" aria-label="Next">
+                                                                <a href="/admin/home/feedback?page=<%=parseInt(currentPage)+1%>" aria-label="Next">
                                                                     <span aria-hidden="true">&raquo;</span>
                                                                 </a>
                                                             </li>

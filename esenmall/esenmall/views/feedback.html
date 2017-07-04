@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>焊割设备及配件营销中心---关于我们</title>
+    <title>焊割设备及配件营销中心---客户留言</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
@@ -52,8 +52,8 @@
             <li><a href="/">首页</a></li>
             <li><a href="/allList">所有商品</a></li>
             <li><a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')">网上商城</a></li>
-            <li style="background: #B71B2C"><a style="color: #fff" href="/aboutUs">关于我们</a></li>
-            <li><a href="/feedback">客户留言</a></li>
+            <li><a href="/aboutUs">关于我们</a></li>
+            <li style="background: #B71B2C"><a style="color: #fff" href="/feedback">客户留言</a></li>
             <li><a href="javascript:void(0);" onclick="window.open('http://www.sgdhj.net/')">埃森自动化</a></li>
         </ul>
     </div>
@@ -174,26 +174,26 @@
         </ul>
     </div>
     <div class="container">
-        <span style="line-height: 30px;"><i class="fa fa-spinner fa-lg"></i> 首页 <i class="fa fa-chevron-right "> </i> 关于我们</span>
-    </div>
-    <div class="brand" style="width: 1225px; height: auto;margin: 0 auto">
-       <img style="width: 100%" src="/images/model/aboutus.jpg">
+        <span style="line-height: 30px;"><i class="fa fa-spinner fa-lg"></i> 首页 <i class="fa fa-chevron-right "> </i> 客户留言</span>
     </div>
     <hr>
     <div class="container">
-        <h2 style="text-align: center; color: #B71B2C">“埃森焊割设备及配件营销中心”----简介</h2>
-        <div style="width: 800px; margin:30px auto;font-size: 23px ;line-height:40px">
-        <p style="text-indent:50px">本中心成立于2005年，从事于焊割设备及配件销售服务十余年，年销售额达1000万元，是潍坊地区最大的焊割设备及配件销售单位之一。十年老店，能够全面掌握全国焊割配件质量，始终真诚实意的为新老客户提供价格实惠、质量可靠的产品与服务。</p>
-     <p style="text-indent:50px;"><i style="color:#B71B2C ">主营产品：</i>各品牌电焊机、氩弧焊机、自动化工装、机器人焊接设备；批发各种优质焊割配件、焊接器材：二保焊焊枪、送丝机、割炬、二氧化碳表、等离子割枪、氩弧焊枪、焊钳、焊罩、焊机线、焊条、焊丝、磨光机、防堵膏、防溅剂、氧气管等及各种焊机维修。</p>
-     <p style="text-indent:50px; padding: 10px">商品详情及购买请关注 <i ><a style="color:#B71B2C"  href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')">淘宝网上商城</a></i> </p>
-     <div style="font-size:18px ; line-height: 25px">
-     <i>
-     <p >联系人：王经理</p>
-     <p>联系电话：0536-8572582</p>
-     <p>手机：13863616972</p>
-     <p>地址：山东省潍坊市豪德贸易广场</p>
-     </i>
-     </div>
+       <div class='feedbackLeave'>
+        <div class='feedbackMessage'>
+        <form action="/feedback" method="POST">
+        <span>留言主题</span><input type="text" name='title'><br>
+        <span class='feedbackTextarea'>留言内容</span><textarea name="content" id="" cols="70" rows="10"  required></textarea><i style="color: red" class="fa fa-asterisk"></i><br>
+        <span>您的称呼</span><input  type="text" name='name' required><i style="color: red" class="fa fa-asterisk"></i><br>
+        <span>您的性别</span><input id="sex" name="sex" type="radio" value="先生" checked>先生
+        <input name="sex" id="sex" type="radio" value="女士" >女士<br>
+        <span>公司名称</span><input type="text" name='company'><br>
+        <span>联系地址</span><input type="text" name='address'><br>
+        <span>联系电话</span><input type="text" name='tel' required><i style="color: red" class="fa fa-asterisk"></i> <br>
+        <span>传真号码</span><input type="text" name='fax'><br>
+        <span>电子邮箱</span><input type="email" name='email'><br>
+        <button>提交留言</button><span style="font-size: 15px;color:#0099CC "><%=status%></span>
+        </form>
+    </div>
     </div>
     </div>
     <!-- 在线咨询 -->
@@ -287,7 +287,7 @@
                     <img src="/images/footer/tel.jpg">
                 </li>
             </ul>
-            <p>埃森商城网站 Copyright2015-2016.All Rights Reserved</p>
+            <p>埃森焊接网站 Copyright2015-2016.All Rights Reserved</p>
         </div>
     </div>
     <p class="margin-bottom"><span>技术支持：大金鱼 </span> <span>视觉设计：金鱼创想广告</span></p>

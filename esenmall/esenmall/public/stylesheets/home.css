@@ -1,10 +1,12 @@
 .navbar {
-	background-color: #09C;
-	color: #fff;
+    background-color: #09C;
+    color: #fff;
 }
+
 .navbar-default .navbar-nav > li > a {
     color: #fff;
 }
+
 .navbar {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -12,93 +14,251 @@
     margin: 0;
     border: 0;
 }
+
 .nav_main {
-	width: 13%;
-	height: 1080px;
-	background-color: #293038;
+    width: 13%;
+    height: 1080px;
+    background-color: #293038;
 }
+
 .nav_main ul li {
-	text-indent: 10px;
-	
+    text-indent: 10px;
 }
+
 .nav_main>ul {
-	padding-top: 20px;
+    padding-top: 20px;
 }
+
 .nav_main>ul>li:hover {
-cursor: pointer;
+    cursor: pointer;
 }
+
 .nav_main ul li {
-	color: #fff;
-	height: 40px;
+    color: #fff;
+    height: 40px;
 }
+
 .nav_main ul li:hover {
-	background-color: #42515F;
+    background-color: #42515F;
 }
+
 .nav_main ul li:active {
-	background-color: #09C;
+    background-color: #09C;
 }
+
 .nav_main ul li a {
-	color:#fff;
-	line-height: 40px;
+    color: #fff;
+    line-height: 40px;
 }
+
 .nav_main ul li a:hover {
-	text-decoration: none;
-} 
+    text-decoration: none;
+}
+
 .nav_main ul li a i {
-	margin-right: 8px;
+    margin-right: 8px;
 }
+
 .nav_main ul li ul li {
-	padding-left:50px;
+    padding-left: 50px;
 }
-.nav_main , .content {
-	float: left;
-}
+
+.nav_main,
 .content {
-	width: 87%;
+    float: left;
 }
+
+.content {
+    width: 87%;
+}
+
 .content h1 {
-	color:#09C;
-	margin-top: 20px;
-	margin-bottom: 20px;
+    color: #09C;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 .form-inline {
-	border: 1px solid #09C;
-	width: 765px;
-	margin: 0 auto;
+    border: 1px solid #09C;
+    width: 765px;
+    margin: 0 auto;
 }
+
 .btn-success+span {
-	margin-left: 15px;
-	font-size: 14px;
+    margin-left: 15px;
+    font-size: 14px;
 }
 
 .shanpinguanli {
-	display: block;
+    display: block;
 }
+
 .flcx {
-	margin-bottom: 55px;
-	margin-left: -80px;
+    margin-bottom: 55px;
+    margin-left: -80px;
 }
+
 .flcxselect {
-	display: inline-block;
-	width: 630px;
+    display: inline-block;
+    width: 630px;
 }
+
 .flcxform {
-	height: 40px;
-	margin-left: 430px;
+    height: 40px;
+    margin-left: 430px;
 }
+
 .allcx {
-	margin-left: 2px;
-	margin-bottom: 55px;
+    margin-left: 2px;
+    margin-bottom: 55px;
 }
+
 .user form {
-	margin: 40px auto;
-	width: 480px;
-	display: block;
+    margin: 40px auto;
+    width: 480px;
+    display: block;
     padding-left: 70px;
 }
+
 #bs-example-navbar-collapse-1 form {
-	visibility: hidden;
+    visibility: hidden;
 }
+
 .nav_main ul li ul {
-	visibility: hidden;
+    visibility: hidden;
+}
+
+
+/*客户留言管理*/
+
+#h5-message {
+    height: auto;
+    margin: 0 auto;
+}
+.h5-messageRight {
+    height: 540px;
+    background: #f3f5f7;
+    margin-top: 10px;
+    width: 1181px;
+}
+
+.h5-box {
+    width: 280px;
+    height: 535px;
+    margin-left: 15px;
+    margin-top: 25px;
+    float: left;
+    border-right: 1px solid #d9dde1;
+    background: #f3f5f7;
+    margin-bottom: 20px;
+}
+
+.h5-avatar {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.h5-name {
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: top;
+    margin-left: 8px;
+    color: #93999f;
+}
+
+.h5-name a {
+    text-decoration: none;
+    color: #93999f;
+}
+
+.h5-ratings {
+    width: 260px;
+    height: 440px;
+    margin: 0 auto;
+    color: #4d555d;
+    position: relative;
+}
+
+.h5-ratings textarea {
+    font-size: 14px;
+    line-height: 26px;
+    text-indent: 2em;
+    width: 245px;
+    height: 230px;
+    resize: none;
+    outline: none;
+    background: #f3f5f7;
+    font-family: "微软雅黑";
+    color: gray;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.h5-time {
+    width: 200px;
+    height: 20px;
+    left: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.h5-time p {
+    color: gray;
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.h5-delete {
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+}
+
+.h5-btn {
+    border: 0px;
+    background: #f3f5f7;
+    color: #0099CC;
+    cursor: pointer;
+    float: right;   
+}
+.h5-btn:hover{
+	color: red;
+	font-weight: bold;
+}
+
+address {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+address span {
+    color: black
+}
+
+.h5-company,
+.h5-tel,
+.h5-fax,
+.h5-address {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.h5-title {
+    width: 245px;
+    height: 30px;
+    margin-top: 18px;
+    text-align: center;
+    margin-bottom: 20px;
 }
