@@ -8,7 +8,7 @@
         {{detail.title}}
       </div>
       <div class="prt_info_mainpic">
-        <img v-if="!show" :src="'http://localhost:3000/images/'+detail.mainpic">
+        <img v-if="!show" :src="siteUrl+'/images/'+detail.mainpic">
       </div>
     </div>
     <div class="prt_data">
@@ -21,7 +21,7 @@
         {{detail.describe}}
         <ul>
           <li v-for="image in detail.images">
-            <img :src="'http://localhost:3000/images/'+image">
+            <img :src="siteUrl+'/images/'+image">
           </li>
         </ul>
       </div>
@@ -51,21 +51,35 @@ export default {
      Search
   },
   created(){
-     this.axios({
-        method:'GET',
-          url:'http://localhost:3000/detail/'+this.$route.params.id,
-          params: {
-           fromvue:2
+     // this.axios({
+     //    method:'GET',
+     //      url:'http://localhost:3000/detail/'+this.$route.params.id,
+     //      params: {
+     //       fromvue:2
+     //      }
+     //    })
+     //      .then((response) =>{
+     //          console.log(response.data)
+     //          this.detail=response.data;
+     //          this.listname=response.data.id;
+     //          this.show = false
+     //    })
+     //    .catch((error)=>{
+     //        console.log(error)
+     //    })
+     var url=this.siteUrl+"/detail/"+this.$route.params.id+"?fromvue=2"
+      $.ajax({
+          url:url,
+          type:"GET",
+          success:(response)=>{
+             console.log(response)
+              this.detail=response;
+              this.listname=response.id
+              this.show=false
+          },
+          error:(xhr,status,error)=>{
+             console.log(error)
           }
-        })
-          .then((response) =>{
-              console.log(response.data)
-              this.detail=response.data;
-              this.listname=response.data.id;
-              this.show = false
-        })
-        .catch((error)=>{
-            console.log(error)
         })
   }
 }

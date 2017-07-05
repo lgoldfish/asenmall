@@ -4,14 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import MuseUI from 'muse-ui'
+import $ from 'jquery'
 
 import 'muse-ui/dist/muse-ui.css'
 Vue.use(MuseUI)
 
-import axios from 'axios'
-Vue.prototype.axios=axios;
+// import axios from 'axios'
+// Vue.prototype.axios=axios;
 
 Vue.config.productionTip = false
+Vue.prototype.siteUrl="http://localhost:3080"
 
 /* eslint-disable no-new */
 new Vue({

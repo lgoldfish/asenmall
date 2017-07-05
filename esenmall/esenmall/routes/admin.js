@@ -49,8 +49,9 @@ router.get("/home", function(req, res) {
 router.post("/home/select", function(req, res) {
     var page = req.query.page || 1;
     var pageCount = 100;
-    Feedback.count({ id: req.body.id }).then((aCount) => {
-        Feedback.find({ id: req.body.id }).skip((page - 1) * pageCount).limit(pageCount).sort({ _id: -1 }).then((data) => {
+    console.log("req.body.id",req.body.id)
+    Commodity.count({ id: req.body.id }).then((aCount) => {
+        Commodity.find({ id: req.body.id }).skip((page - 1) * pageCount).limit(pageCount).sort({ _id: -1 }).then((data) => {
             console.log("Commodity数据", data)
             res.render("admin/home", {
                 title: "查询成功",

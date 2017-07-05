@@ -5,6 +5,12 @@ $(function() {
     })
 
     // 主导航二级菜单
+    $('.nav').mouseleave(function(){
+        $(".nav_left").css("display", "none");
+    });
+     $('.nav_left').mouseenter(function(){
+        $(".nav_left").css("display", "block");
+    });
     $(".nav_left > li").mouseenter(function() {
         console.log("000000")
         $(".nav_left_show > li").eq($(this).index()).css('display', 'block').siblings().css('display', 'none')
@@ -20,6 +26,7 @@ $(function() {
             $(this).css("display", "none")
             $(".nav_left").css("display", "none")
         })
+
         // 手机淘宝
     $('.wmsContact').click(function() {
         $('.wmsOpen').animate({ 'right': '0' }, 500)

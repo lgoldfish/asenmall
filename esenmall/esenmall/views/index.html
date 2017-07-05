@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="埃森焊接-潍坊焊接设备及配件营销中心,自动化焊接机器人,焊接工装,电焊机,等离子切割机,氩弧焊机,气保焊机,焊接配件,切割配件,焊接设备,切割设备">
+    <meta name="description" content="主营产品：各品牌电焊机、氩弧焊机、自动化工装、机器人焊接设备；批发各种优质焊割配件、焊接器材：二保焊焊枪、送丝机、割炬、二氧化碳表、等离子割枪、氩弧焊枪、焊钳、焊罩、焊机线、焊条、焊丝、磨光机、防堵膏、防溅剂、氧气管等及各种焊机维修。">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>焊割设备及配件营销中心---首页</title>
     <!-- Bootstrap -->
@@ -32,28 +34,27 @@
         </div>
     </div>
     <div class="container margin-bottom ">
-
-    <%for(var x=0;x<banner.length;x++){%>
-                    <%if(banner[x].id=="banner01"){%>
-                       <img class="banner01" src="images/<%=banner[x].img%>">
-                        <%}%>
-                            <%}%>
-            <!-- 时钟特效 -->
-                <div class="clock" >
-                    <div id="txt">
-                        <div class="f1">
-                            <span id="txt1"></span><span id="txt2"></span>
+        <%for(var x=0;x<banner.length;x++){%>
+            <%if(banner[x].id=="banner01"){%>
+                <img class="banner01" src="images/<%=banner[x].img%>">
+                <%}%>
+                    <%}%>
+                        <!-- 时钟特效 -->
+                        <div class="clock">
+                            <div id="txt">
+                                <div class="f1">
+                                    <span id="txt1"></span><span id="txt2"></span>
+                                </div>
+                                <div class="f2">
+                                    <p id="txt3"></p>
+                                    <p id="txt4"></p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="f2">
-                            <p id="txt3"></p>
-                            <p id="txt4"></p>
-                        </div>
-                    </div>
-                </div>
     </div>
     <div class="container logo">
-        <img src="images/logo.jpg" alt="">
-        <form  class="sousou" action="/find">
+        <img src="images/logo.jpg" alt="焊接配件，焊接设备">
+        <form class="sousou" action="/find">
             <input type="text" name="find" placeholder="搜索 &nbsp  型号/系列/品牌">
             <button><img src="/images/model/sousuo.jpg"></button>
         </form>
@@ -65,7 +66,7 @@
             <li><a href="/allList">所有商品</a></li>
             <li><a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')">网上商城</a></li>
             <li><a href="/aboutUs">关于我们</a></li>
-             <li><a href="/feedback">客户留言</a></li>
+            <li><a href="/feedback">客户留言</a></li>
             <li><a href="javascript:void(0);" onclick="window.open('http://www.sgdhj.net/')">埃森自动化</a></li>
         </ul>
     </div>
@@ -195,26 +196,25 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-
-                   <%for(var x=0;x<banner.length;x++){%>
-                    <%if(banner[x].id=="carousel1"){%>
-                      <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"><img class="banner01" src="images/<%=banner[x].img%>"></a> 
-                        <%}%>
-                            <%}%>         
+                        <%for(var x=0;x<banner.length;x++){%>
+                            <%if(banner[x].id=="carousel1"){%>
+                                <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"><img class="banner01" src="images/<%=banner[x].img%>"></a>
+                                <%}%>
+                                    <%}%>
                     </div>
                     <div class="item ">
-                         <%for(var x=0;x<banner.length;x++){%>
-                    <%if(banner[x].id=="carousel2"){%>
-                      <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"> <img class="banner01" src="images/<%=banner[x].img%>"></a>
-                        <%}%>
-                            <%}%>  
+                        <%for(var x=0;x<banner.length;x++){%>
+                            <%if(banner[x].id=="carousel2"){%>
+                                <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"> <img class="banner01" src="images/<%=banner[x].img%>"></a>
+                                <%}%>
+                                    <%}%>
                     </div>
                     <div class="item ">
-                         <%for(var x=0;x<banner.length;x++){%>
-                    <%if(banner[x].id=="carousel3"){%>
-                        <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"> <img class="banner01" src="images/<%=banner[x].img%>"></a>
-                        <%}%>
-                            <%}%>  
+                        <%for(var x=0;x<banner.length;x++){%>
+                            <%if(banner[x].id=="carousel3"){%>
+                                <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"> <img class="banner01" src="images/<%=banner[x].img%>"></a>
+                                <%}%>
+                                    <%}%>
                     </div>
                 </div>
                 <!-- Controls -->
@@ -246,21 +246,21 @@
                 <div class='wmsLunbo'>
                     <ul>
                         <li>
-                            <a href="<%=lbt[0].newslink%>"><img src="images/<%=lbt[0].newspic%>" alt=""></a>
+                            <a href="<%=lbt[0].newslink%>"><img src="images/<%=lbt[0].newspic%>" alt="焊接配件，焊接设备"></a>
                             <div class='wmsLunbobottom'>
                                 <%=lbt[0].newstitle%>
                             </div>
                             <span class='wmsBgc'></span>
                         </li>
                         <li>
-                            <a href="<%=lbt[1].newslink%>"><img src="images/<%=lbt[1].newspic%>" alt=""></a>
+                            <a href="<%=lbt[1].newslink%>"><img src="images/<%=lbt[1].newspic%>" alt="焊接配件，焊接设备"></a>
                             <div class='wmsLunbobottom'>
                                 <%=lbt[1].newstitle%>
                             </div>
                             <span class='wmsBgc2'></span>
                         </li>
                         <li>
-                            <a href="<%=lbt[2].newslink%>"><img src="images/<%=lbt[2].newspic%>" alt=""></a>
+                            <a href="<%=lbt[2].newslink%>"><img src="images/<%=lbt[2].newspic%>" alt="焊接配件，焊接设备"></a>
                             <div class='wmsLunbobottom'>
                                 <%=lbt[2].newstitle%>
                             </div>
@@ -289,7 +289,7 @@
             <div class='wmsMediamiddle'>
                 <%for(var x=0;x<mediapic.length;x++){%>
                     <%if(mediapic[x].id=="img1"){%>
-                        <a href="/list/焊接设备"><img src="images/<%=mediapic[x].img%>" alt=""></a>
+                        <a href="/list/焊接设备"><img src="images/<%=mediapic[x].img%>" alt="焊接配件，焊接设备"></a>
                         <%}%>
                             <%}%>
             </div>
@@ -298,14 +298,14 @@
                     <div class=wmsRightimg1>
                         <%for(var x=0;x<mediapic.length;x++){%>
                             <%if(mediapic[x].id=="img2"){%>
-                                <a href="/list/电焊机"><img src="images/<%=mediapic[x].img%>" alt=""></a>
+                                <a href="/list/电焊机"><img src="images/<%=mediapic[x].img%>" alt="焊接配件，焊接设备"></a>
                                 <%}%>
                                     <%}%>
                     </div>
                     <div class='wmsRightimg2'>
                         <%for(var x=0;x<mediapic.length;x++){%>
                             <%if(mediapic[x].id=="img3"){%>
-                                <a href="/list/焊接配件"><img src="images/<%=mediapic[x].img%>" alt=""></a>
+                                <a href="/list/焊接配件"><img src="images/<%=mediapic[x].img%>" alt="焊接配件，焊接设备"></a>
                                 <%}%>
                                     <%}%>
                     </div>
@@ -313,7 +313,7 @@
                 <div class='wmsRightimg3'>
                     <%for(var x=0;x<mediapic.length;x++){%>
                         <%if(mediapic[x].id=="img4"){%>
-                            <a href="/list/切割设备"><img src="images/<%=mediapic[x].img%>" alt=""></a>
+                            <a href="/list/切割设备"><img src="images/<%=mediapic[x].img%>" alt="焊接配件，焊接设备"></a>
                             <%}%>
                                 <%}%>
                 </div>
@@ -518,10 +518,10 @@
         </div>
         <div class="container margin-bottom ">
             <%for(var x=0;x<banner.length;x++){%>
-                    <%if(banner[x].id=="banner02"){%>
-                       <img class="banner01" src="images/<%=banner[x].img%>">
+                <%if(banner[x].id=="banner02"){%>
+                    <img class="banner01" src="images/<%=banner[x].img%>">
+                    <%}%>
                         <%}%>
-                            <%}%>
         </div>
         <!-- 电焊机  -->
         <div class="tab" js-tab="2" id="wms4">
@@ -720,10 +720,10 @@
         </div>
         <div class="container margin-bottom ">
             <%for(var x=0;x<banner.length;x++){%>
-                    <%if(banner[x].id=="banner03"){%>
-                       <img class="banner01" src="images/<%=banner[x].img%>">
+                <%if(banner[x].id=="banner03"){%>
+                    <img class="banner01" src="images/<%=banner[x].img%>">
+                    <%}%>
                         <%}%>
-                            <%}%>
         </div>
         <!-- 切割配件 -->
         <div class="tab" js-tab="2" id="wms7">
@@ -921,11 +921,11 @@
             </div>
         </div>
         <div class="container margin-bottom ">
-           <%for(var x=0;x<banner.length;x++){%>
-                    <%if(banner[x].id=="banner04"){%>
-                       <img class="banner01" src="images/<%=banner[x].img%>">
+            <%for(var x=0;x<banner.length;x++){%>
+                <%if(banner[x].id=="banner04"){%>
+                    <img class="banner01" src="images/<%=banner[x].img%>">
+                    <%}%>
                         <%}%>
-                            <%}%>
         </div>
         <!-- 焊材  -->
         <div class="tab" js-tab="2" id="wms10">
@@ -993,11 +993,11 @@
             </div>
         </div>
         <div class="container margin-bottom ">
-           <%for(var x=0;x<banner.length;x++){%>
-                    <%if(banner[x].id=="banner05"){%>
-                       <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/category-1035601667-1409722261.htm?spm=a1z10.5-c-s.w4010-15753720616.7.3641b08aAPjM2x&search=y&catName=%C9%EE%DB%DA%B9%CC%B0%EE%BA%B8%BB%FA#bd')"><img style="height:350px"  class="banner01" src="images/<%=banner[x].img%>"></a>
+            <%for(var x=0;x<banner.length;x++){%>
+                <%if(banner[x].id=="banner05"){%>
+                    <a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/category-1035601667-1409722261.htm?spm=a1z10.5-c-s.w4010-15753720616.7.3641b08aAPjM2x&search=y&catName=%C9%EE%DB%DA%B9%CC%B0%EE%BA%B8%BB%FA#bd')"><img style="height:350px"  class="banner01" src="images/<%=banner[x].img%>"></a>
+                    <%}%>
                         <%}%>
-                            <%}%>
         </div>
     </div>
     <div class="container">
@@ -1026,16 +1026,15 @@
     </div>
     <!-- 回到顶部按钮 -->
     <div id="topcontrol" title="回到顶部" style="position: fixed; bottom: 18px; right: 0px; opacity: 1; cursor: pointer;">
-        <img src="images/topcontrol.png" alt="">
+        <img src="images/topcontrol.png" alt="焊接配件，焊接设备">
     </div>
     <!-- 左侧面板拉出来 -->
-
-<div class='wmsLefthidden'>
+    <div class='wmsLefthidden'>
         <div class='wmsDrag'>
-            <img src="/images/model/1_1.jpg" alt="" title='拉我'>
+            <img src="/images/model/1_1.jpg" alt="焊接配件，焊接设备" title='拉我'>
         </div>
         <div class='wmsDrag2'>
-            <img src="/images/model/1_2.jpg" alt="" title="点我关闭">
+            <img src="/images/model/1_2.jpg" alt="焊接配件，焊接设备" title="点我关闭">
         </div>
         <div class='wmsText'>关于我们</div>
         <div class="showUs">
@@ -1045,8 +1044,6 @@
             <p>商品详情及购买请访问: <i><a href="javascript:void(0);" onclick="window.open('https://shop115264735.taobao.com/?spm=a230r.7195193.1997079397.113.BIx9G0')"> 淘宝网上商城</a></i> </p>
         </div>
     </div>
-
-
     <div class="footer ">
         <div class="container">
             <ul class="icon_message">

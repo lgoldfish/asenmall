@@ -2,6 +2,8 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+// 引入jquery
+var webpack = require("webpack")
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -54,5 +56,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  // 引入jquery
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.ProvidePlugin({
+         jQuery: "jquery",
+         $: "jquery"
+    })
+]
 }

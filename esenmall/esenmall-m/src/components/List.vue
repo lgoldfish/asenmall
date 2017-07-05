@@ -7,7 +7,7 @@
       <li v-for="detail in details">
         <router-link :to="{name:'Detail',params:{id:detail._id}}">
           <div class="prt_prc">
-            <img :src="'http://localhost:3000/images/'+detail.mainpic">
+            <img :src="siteUrl+'/images/'+detail.mainpic">
           </div>
           <div class="prt_next">
             <img src="assets/images/icon_list.png">
@@ -41,23 +41,39 @@ export default {
     Search
   },
   created(){
-     this.axios({
-        method:'GET',
-          url:'http://localhost:3000/list/'+this.$route.params.id,
-          params: {
-           fromvue:1
+     // this.axios({
+     //    method:'GET',
+     //      url:'http://localhost:3000/list/'+this.$route.params.id,
+     //      params: {
+     //       fromvue:1
+     //      }
+     //    })
+     //      .then((response) =>{
+     //          // console.log(response.data)
+     //          this.details=response.data;
+     //          this.listname=response.data[0].id
+     //    })
+     //    .catch((error)=>{
+     //        console.log(error)
+     //    })
+     // console.log("66666",this.$route.params.id)
+     var url=this.siteUrl+"/list/"+this.$route.params.id+"?fromvue=1"
+         $.ajax({
+          url:url,
+          type:"GET",
+          success:(response)=>{
+             console.log(response)
+
+
+              this.details=response;
+              this.listname=response[0].id
+          },
+          error:(xhr,status,error)=>{
+             console.log(error)
           }
         })
-          .then((response) =>{
-              // console.log(response.data)
-              this.details=response.data;
-              this.listname=response.data[0].id
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
-  }
-}
+      }
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -2,15 +2,18 @@ $(function() {
 
     // 主导航二级菜单
     $(".nav_left > li").mouseenter(function() {
-        $(".nav_left_show > li").eq($(this).index()).css('display', 'block').siblings().css('display', 'none')
+        $(".nav_left_show > li").eq($(this).index()).css('display', 'block').siblings().css('display', 'none');
+        
     })
     $(".nav_left ").mouseleave(function() {
-        $(".nav_left_show>li").css("display", "none")
+        $(".nav_left_show>li").css("display", "none");
+        
     })
     $(".nav_left_show>li").mouseenter(function() {
-        $(this).css("display", "block")
+        $(this).css("display", "block");
     }).mouseleave(function() {
-        $(this).css("display", "none")
+        $(this).css("display", "none");
+       
     })
 
 
