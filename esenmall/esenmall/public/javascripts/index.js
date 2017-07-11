@@ -258,5 +258,5 @@ $('.wmsDrag').on('mousedown', function(e) {
     
     
     if (isMobile() !== false)
-        window.location.href = "http://localhost:8080";
+        window.location.href = "http://localhost:8000";
 })
